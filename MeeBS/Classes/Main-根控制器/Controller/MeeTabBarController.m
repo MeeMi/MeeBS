@@ -26,7 +26,8 @@
     // 添加子控制器
     [self setupChildVc];
     
-    // 设置导航条左右两边的按钮
+    // 统一设置tabBarItem的样式
+    [self setupTabBarItemStyle];
     
 }
 
@@ -72,4 +73,42 @@
 
 
 
+#pragma mark - 设置底部的tabBar的样式
+- (void)setupTabBarItemStyle
+{
+    // 获取所以的TabBarItem
+    UITabBarItem *tabBarItem = [UITabBarItem appearance];
+    
+    // 设置正在状态和选择中状态下的 文字的颜色 和大下
+    
+    // 正常状态下
+    NSMutableDictionary *attr1 = [NSMutableDictionary dictionary];
+    // 字体的大小
+    attr1[NSFontAttributeName] = [UIFont systemFontOfSize:13.0];
+    // 字体的颜色
+    attr1[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+    
+    [tabBarItem setTitleTextAttributes:attr1 forState:UIControlStateNormal];
+    
+    // 选中状态下
+    NSMutableDictionary *attr2 = [NSMutableDictionary dictionary];
+    [tabBarItem setTitleTextAttributes:attr2 forState:UIControlStateSelected];
+    
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
