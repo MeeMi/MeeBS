@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9BFA81C11BEAF7E500AA71B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA81C01BEAF7E500AA71B5 /* main.m */; };
-		9BFA81C41BEAF7E500AA71B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA81C31BEAF7E500AA71B5 /* AppDelegate.m */; };
+		9B47C3111BED7F7B0060F6CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3091BED7F7B0060F6CD /* AppDelegate.m */; };
+		9B47C3151BED80E80060F6CD /* MeeTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3141BED80E80060F6CD /* MeeTabBarController.m */; };
+		9B47C3181BED810F0060F6CD /* MeeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3171BED810F0060F6CD /* MeeNavigationController.m */; };
+		9B47C31B1BED82F30060F6CD /* MeeEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C31A1BED82F30060F6CD /* MeeEssenceViewController.m */; };
+		9B47C31E1BED83120060F6CD /* MeeFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C31D1BED83120060F6CD /* MeeFriendTrendsViewController.m */; };
+		9B47C3211BED83200060F6CD /* MeeMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3201BED83200060F6CD /* MeeMeViewController.m */; };
+		9B47C3241BED83450060F6CD /* MeeNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3231BED83450060F6CD /* MeeNewViewController.m */; };
+		9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3261BED835F0060F6CD /* MeePulishViewController.m */; };
+		9BFA44361BEDAD66007DD99E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA44341BEDAD66007DD99E /* main.m */; };
 		9BFA81CC1BEAF7E500AA71B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA81CB1BEAF7E500AA71B5 /* Assets.xcassets */; };
-		9BFA81CF1BEAF7E500AA71B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA81CD1BEAF7E500AA71B5 /* LaunchScreen.storyboard */; };
 		9BFA81DA1BEAF7E500AA71B5 /* MeeBSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA81D91BEAF7E500AA71B5 /* MeeBSTests.m */; };
 		9BFA81E51BEAF7E500AA71B5 /* MeeBSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA81E41BEAF7E500AA71B5 /* MeeBSUITests.m */; };
 /* End PBXBuildFile section */
@@ -33,12 +39,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B47C3081BED7F7B0060F6CD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9B47C3091BED7F7B0060F6CD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9B47C3131BED80E80060F6CD /* MeeTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeTabBarController.h; sourceTree = "<group>"; };
+		9B47C3141BED80E80060F6CD /* MeeTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeTabBarController.m; sourceTree = "<group>"; };
+		9B47C3161BED810F0060F6CD /* MeeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeNavigationController.h; sourceTree = "<group>"; };
+		9B47C3171BED810F0060F6CD /* MeeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeNavigationController.m; sourceTree = "<group>"; };
+		9B47C3191BED82F30060F6CD /* MeeEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeEssenceViewController.h; sourceTree = "<group>"; };
+		9B47C31A1BED82F30060F6CD /* MeeEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeEssenceViewController.m; sourceTree = "<group>"; };
+		9B47C31C1BED83120060F6CD /* MeeFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeFriendTrendsViewController.h; sourceTree = "<group>"; };
+		9B47C31D1BED83120060F6CD /* MeeFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeFriendTrendsViewController.m; sourceTree = "<group>"; };
+		9B47C31F1BED83200060F6CD /* MeeMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeMeViewController.h; sourceTree = "<group>"; };
+		9B47C3201BED83200060F6CD /* MeeMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeMeViewController.m; sourceTree = "<group>"; };
+		9B47C3221BED83450060F6CD /* MeeNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeNewViewController.h; sourceTree = "<group>"; };
+		9B47C3231BED83450060F6CD /* MeeNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeNewViewController.m; sourceTree = "<group>"; };
+		9B47C3251BED835F0060F6CD /* MeePulishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeePulishViewController.h; sourceTree = "<group>"; };
+		9B47C3261BED835F0060F6CD /* MeePulishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeePulishViewController.m; sourceTree = "<group>"; };
+		9BFA44341BEDAD66007DD99E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9BFA44351BEDAD66007DD99E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9BFA81BC1BEAF7E500AA71B5 /* MeeBS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeeBS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BFA81C01BEAF7E500AA71B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9BFA81C21BEAF7E500AA71B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9BFA81C31BEAF7E500AA71B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9BFA81CB1BEAF7E500AA71B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9BFA81CE1BEAF7E500AA71B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BFA81D01BEAF7E500AA71B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BFA81D51BEAF7E500AA71B5 /* MeeBSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeeBSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFA81D91BEAF7E500AA71B5 /* MeeBSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeeBSTests.m; sourceTree = "<group>"; };
@@ -73,6 +93,255 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B47C2F21BED7F7B0060F6CD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C2FB1BED7F7B0060F6CD /* Main-根控制器 */,
+				9B47C2F31BED7F7B0060F6CD /* Essence-精华 */,
+				9B47C2F71BED7F7B0060F6CD /* FriendTrends-关注 */,
+				9B47C2FF1BED7F7B0060F6CD /* Me-我 */,
+				9B47C3031BED7F7B0060F6CD /* New-新贴 */,
+				9B47C30D1BED7F7B0060F6CD /* Pulish-发布 */,
+				9B47C3071BED7F7B0060F6CD /* Other-其他 */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9B47C2F31BED7F7B0060F6CD /* Essence-精华 */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C2F41BED7F7B0060F6CD /* Controller */,
+				9B47C2F51BED7F7B0060F6CD /* Model */,
+				9B47C2F61BED7F7B0060F6CD /* View */,
+			);
+			path = "Essence-精华";
+			sourceTree = "<group>";
+		};
+		9B47C2F41BED7F7B0060F6CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C3191BED82F30060F6CD /* MeeEssenceViewController.h */,
+				9B47C31A1BED82F30060F6CD /* MeeEssenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B47C2F51BED7F7B0060F6CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B47C2F61BED7F7B0060F6CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B47C2F71BED7F7B0060F6CD /* FriendTrends-关注 */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C2F81BED7F7B0060F6CD /* Controller */,
+				9B47C2F91BED7F7B0060F6CD /* Model */,
+				9B47C2FA1BED7F7B0060F6CD /* View */,
+			);
+			path = "FriendTrends-关注";
+			sourceTree = "<group>";
+		};
+		9B47C2F81BED7F7B0060F6CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C31C1BED83120060F6CD /* MeeFriendTrendsViewController.h */,
+				9B47C31D1BED83120060F6CD /* MeeFriendTrendsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B47C2F91BED7F7B0060F6CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B47C2FA1BED7F7B0060F6CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B47C2FB1BED7F7B0060F6CD /* Main-根控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C2FC1BED7F7B0060F6CD /* Controller */,
+				9B47C2FD1BED7F7B0060F6CD /* Model */,
+				9B47C2FE1BED7F7B0060F6CD /* View */,
+			);
+			path = "Main-根控制器";
+			sourceTree = "<group>";
+		};
+		9B47C2FC1BED7F7B0060F6CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C3131BED80E80060F6CD /* MeeTabBarController.h */,
+				9B47C3141BED80E80060F6CD /* MeeTabBarController.m */,
+				9B47C3161BED810F0060F6CD /* MeeNavigationController.h */,
+				9B47C3171BED810F0060F6CD /* MeeNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B47C2FD1BED7F7B0060F6CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B47C2FE1BED7F7B0060F6CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B47C2FF1BED7F7B0060F6CD /* Me-我 */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C3001BED7F7B0060F6CD /* Controller */,
+				9B47C3011BED7F7B0060F6CD /* Model */,
+				9B47C3021BED7F7B0060F6CD /* View */,
+			);
+			path = "Me-我";
+			sourceTree = "<group>";
+		};
+		9B47C3001BED7F7B0060F6CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C31F1BED83200060F6CD /* MeeMeViewController.h */,
+				9B47C3201BED83200060F6CD /* MeeMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B47C3011BED7F7B0060F6CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B47C3021BED7F7B0060F6CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B47C3031BED7F7B0060F6CD /* New-新贴 */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C3041BED7F7B0060F6CD /* Controller */,
+				9B47C3051BED7F7B0060F6CD /* Model */,
+				9B47C3061BED7F7B0060F6CD /* View */,
+			);
+			path = "New-新贴";
+			sourceTree = "<group>";
+		};
+		9B47C3041BED7F7B0060F6CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C3221BED83450060F6CD /* MeeNewViewController.h */,
+				9B47C3231BED83450060F6CD /* MeeNewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B47C3051BED7F7B0060F6CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B47C3061BED7F7B0060F6CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B47C3071BED7F7B0060F6CD /* Other-其他 */ = {
+			isa = PBXGroup;
+			children = (
+				9BFA44341BEDAD66007DD99E /* main.m */,
+				9BFA44351BEDAD66007DD99E /* PrefixHeader.pch */,
+				9B47C3081BED7F7B0060F6CD /* AppDelegate.h */,
+				9B47C3091BED7F7B0060F6CD /* AppDelegate.m */,
+				9B47C30A1BED7F7B0060F6CD /* Controller */,
+				9B47C30B1BED7F7B0060F6CD /* Model */,
+				9B47C30C1BED7F7B0060F6CD /* View */,
+			);
+			path = "Other-其他";
+			sourceTree = "<group>";
+		};
+		9B47C30A1BED7F7B0060F6CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B47C30B1BED7F7B0060F6CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B47C30C1BED7F7B0060F6CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B47C30D1BED7F7B0060F6CD /* Pulish-发布 */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C30E1BED7F7B0060F6CD /* Controller */,
+				9B47C30F1BED7F7B0060F6CD /* Model */,
+				9B47C3101BED7F7B0060F6CD /* View */,
+			);
+			path = "Pulish-发布";
+			sourceTree = "<group>";
+		};
+		9B47C30E1BED7F7B0060F6CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B47C3251BED835F0060F6CD /* MeePulishViewController.h */,
+				9B47C3261BED835F0060F6CD /* MeePulishViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B47C30F1BED7F7B0060F6CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B47C3101BED7F7B0060F6CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9BFA81B31BEAF7E500AA71B5 = {
 			isa = PBXGroup;
 			children = (
@@ -96,11 +365,7 @@
 		9BFA81BE1BEAF7E500AA71B5 /* MeeBS */ = {
 			isa = PBXGroup;
 			children = (
-				9BFA81C21BEAF7E500AA71B5 /* AppDelegate.h */,
-				9BFA81C31BEAF7E500AA71B5 /* AppDelegate.m */,
-				9BFA81CB1BEAF7E500AA71B5 /* Assets.xcassets */,
-				9BFA81CD1BEAF7E500AA71B5 /* LaunchScreen.storyboard */,
-				9BFA81D01BEAF7E500AA71B5 /* Info.plist */,
+				9B47C2F21BED7F7B0060F6CD /* Classes */,
 				9BFA81BF1BEAF7E500AA71B5 /* Supporting Files */,
 			);
 			path = MeeBS;
@@ -109,7 +374,8 @@
 		9BFA81BF1BEAF7E500AA71B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9BFA81C01BEAF7E500AA71B5 /* main.m */,
+				9BFA81CB1BEAF7E500AA71B5 /* Assets.xcassets */,
+				9BFA81D01BEAF7E500AA71B5 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -194,6 +460,7 @@
 		9BFA81B41BEAF7E500AA71B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = Mee;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Lee;
 				TargetAttributes = {
@@ -235,7 +502,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFA81CF1BEAF7E500AA71B5 /* LaunchScreen.storyboard in Resources */,
 				9BFA81CC1BEAF7E500AA71B5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,8 +527,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFA81C41BEAF7E500AA71B5 /* AppDelegate.m in Sources */,
-				9BFA81C11BEAF7E500AA71B5 /* main.m in Sources */,
+				9B47C3151BED80E80060F6CD /* MeeTabBarController.m in Sources */,
+				9B47C3241BED83450060F6CD /* MeeNewViewController.m in Sources */,
+				9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */,
+				9B47C31B1BED82F30060F6CD /* MeeEssenceViewController.m in Sources */,
+				9B47C3211BED83200060F6CD /* MeeMeViewController.m in Sources */,
+				9B47C3111BED7F7B0060F6CD /* AppDelegate.m in Sources */,
+				9B47C31E1BED83120060F6CD /* MeeFriendTrendsViewController.m in Sources */,
+				9BFA44361BEDAD66007DD99E /* main.m in Sources */,
+				9B47C3181BED810F0060F6CD /* MeeNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,17 +569,6 @@
 			targetProxy = 9BFA81E11BEAF7E500AA71B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		9BFA81CD1BEAF7E500AA71B5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9BFA81CE1BEAF7E500AA71B5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9BFA81E71BEAF7E500AA71B5 /* Debug */ = {
@@ -394,6 +656,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "MeeBS/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = MeeBS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Lee.MeeBS;
@@ -406,6 +669,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "MeeBS/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = MeeBS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Lee.MeeBS;
