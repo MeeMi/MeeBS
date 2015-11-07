@@ -92,6 +92,7 @@
     
     // 选中状态下
     NSMutableDictionary *attr2 = [NSMutableDictionary dictionary];
+    attr2[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
     [tabBarItem setTitleTextAttributes:attr2 forState:UIControlStateSelected];
     
 }
