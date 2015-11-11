@@ -15,6 +15,7 @@
 		9B47C3211BED83200060F6CD /* MeeMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3201BED83200060F6CD /* MeeMeViewController.m */; };
 		9B47C3241BED83450060F6CD /* MeeNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3231BED83450060F6CD /* MeeNewViewController.m */; };
 		9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3261BED835F0060F6CD /* MeePulishViewController.m */; };
+		9BEBD10D1BF2C84E00FE8CFB /* MeeTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBD10C1BF2C84E00FE8CFB /* MeeTabBar.m */; };
 		9BFA44361BEDAD66007DD99E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA44341BEDAD66007DD99E /* main.m */; };
 		9BFA443A1BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA44391BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.m */; };
 		9BFA81CC1BEAF7E500AA71B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA81CB1BEAF7E500AA71B5 /* Assets.xcassets */; };
@@ -56,6 +57,8 @@
 		9B47C3231BED83450060F6CD /* MeeNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeNewViewController.m; sourceTree = "<group>"; };
 		9B47C3251BED835F0060F6CD /* MeePulishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeePulishViewController.h; sourceTree = "<group>"; };
 		9B47C3261BED835F0060F6CD /* MeePulishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeePulishViewController.m; sourceTree = "<group>"; };
+		9BEBD10B1BF2C84E00FE8CFB /* MeeTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeTabBar.h; sourceTree = "<group>"; };
+		9BEBD10C1BF2C84E00FE8CFB /* MeeTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeTabBar.m; sourceTree = "<group>"; };
 		9BFA44341BEDAD66007DD99E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BFA44351BEDAD66007DD99E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9BFA44381BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+MeeBarButtonItem.h"; sourceTree = "<group>"; };
@@ -207,6 +210,8 @@
 		9B47C2FE1BED7F7B0060F6CD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9BEBD10B1BF2C84E00FE8CFB /* MeeTabBar.h */,
+				9BEBD10C1BF2C84E00FE8CFB /* MeeTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -540,6 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BEBD10D1BF2C84E00FE8CFB /* MeeTabBar.m in Sources */,
 				9B47C3151BED80E80060F6CD /* MeeTabBarController.m in Sources */,
 				9B47C3241BED83450060F6CD /* MeeNewViewController.m in Sources */,
 				9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */,

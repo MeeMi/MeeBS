@@ -14,6 +14,8 @@
 #import "MeeNewViewController.h"
 #import "MeeMeViewController.h"
 
+#import "MeeTabBar.h"
+
 @interface MeeTabBarController ()
 
 @end
@@ -29,6 +31,8 @@
     // 统一设置tabBarItem的样式
     [self setupTabBarItemStyle];
     
+    
+    [self setupTabBar];
 }
 
 #pragma mark - 添加子控制器
@@ -71,6 +75,16 @@
     [self addChildViewController:nav];
 }
 
+
+#pragma mark - 自定义UITabBar
+- (void)setupTabBar
+{
+    // 因为需要在UITabBar中间添加一个按钮，所以需要自定义UITabBar
+    // self.tabBar
+    // 因为 UITabBar属性只能只读，不能修改，所以，用kvc方法修改系统只读属性
+    [self setValue:[[MeeTabBar alloc]init] forKey:@"tabBar"];
+    
+}
 
 
 #pragma mark - 设置底部的tabBar的样式

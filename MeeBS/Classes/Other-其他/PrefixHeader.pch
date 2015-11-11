@@ -20,4 +20,13 @@
 
 #import "UIBarButtonItem+MeeBarButtonItem.h"
 
+
+// 屏幕的宽高
+//CGFloat MeeScreenW = [UIScreen mainScreen].bounds.size.width;
+//CGFloat MeeScreenH = [UIScreen mainScreen].bounds.size.height;
+
+#define MeeScreenW [UIScreen mainScreen].bounds.size.width
+#define MeeScreenH [UIScreen mainScreen].bounds.size.height
+
+
 #endif
