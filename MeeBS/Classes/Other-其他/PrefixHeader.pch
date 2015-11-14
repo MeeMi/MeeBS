@@ -15,18 +15,22 @@
 // 设置灰色
 #define MeeGrayColor(v) MeeColor(v,v,v)
 // 设置背景的灰色
-#define MeeBgColor MeeGryColor(206)
+#define MeeBgColor MeeGrayColor(206)
 
 
 #import "UIBarButtonItem+MeeBarButtonItem.h"
 
 
 // 屏幕的宽高
-//CGFloat MeeScreenW = [UIScreen mainScreen].bounds.size.width;
-//CGFloat MeeScreenH = [UIScreen mainScreen].bounds.size.height;
 
 #define MeeScreenW [UIScreen mainScreen].bounds.size.width
 #define MeeScreenH [UIScreen mainScreen].bounds.size.height
+
+// 全世界的常量
+#import "MeeConst.h"
+
+#import "UIView+Frame.h"
+
 
 
 #endif

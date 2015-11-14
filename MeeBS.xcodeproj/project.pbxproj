@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		268EF97BA0D98B4E7647092B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D38C993FA7D182A9E412698B /* libPods.a */; };
 		9B47C3111BED7F7B0060F6CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3091BED7F7B0060F6CD /* AppDelegate.m */; };
 		9B47C3151BED80E80060F6CD /* MeeTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3141BED80E80060F6CD /* MeeTabBarController.m */; };
 		9B47C3181BED810F0060F6CD /* MeeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3171BED810F0060F6CD /* MeeNavigationController.m */; };
@@ -17,6 +18,12 @@
 		9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3261BED835F0060F6CD /* MeePulishViewController.m */; };
 		9BEBD10D1BF2C84E00FE8CFB /* MeeTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBD10C1BF2C84E00FE8CFB /* MeeTabBar.m */; };
 		9BF01C5D1BF6C0B50004E78D /* MeeTagTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01C5C1BF6C0B50004E78D /* MeeTagTableViewController.m */; };
+		9BF01C651BF729CE0004E78D /* MeeHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01C641BF729CE0004E78D /* MeeHTTPSessionManager.m */; };
+		9BF01C681BF72CEC0004E78D /* MeeConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01C671BF72CEC0004E78D /* MeeConst.m */; };
+		9BF01C6B1BF7326D0004E78D /* MeeTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01C6A1BF7326D0004E78D /* MeeTagModel.m */; };
+		9BF01C6F1BF737E60004E78D /* MeeTagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01C6D1BF737E60004E78D /* MeeTagTableViewCell.m */; };
+		9BF01C701BF737E60004E78D /* MeeTagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BF01C6E1BF737E60004E78D /* MeeTagTableViewCell.xib */; };
+		9BF01C731BF742080004E78D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01C721BF742080004E78D /* UIView+Frame.m */; };
 		9BFA44361BEDAD66007DD99E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA44341BEDAD66007DD99E /* main.m */; };
 		9BFA443A1BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA44391BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.m */; };
 		9BFA81CC1BEAF7E500AA71B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA81CB1BEAF7E500AA71B5 /* Assets.xcassets */; };
@@ -42,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184A2A2B2FC4F4BAC3F66B1D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3C0BE653616906A83AD39529 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9B47C3081BED7F7B0060F6CD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9B47C3091BED7F7B0060F6CD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9B47C3131BED80E80060F6CD /* MeeTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeTabBarController.h; sourceTree = "<group>"; };
@@ -62,6 +71,17 @@
 		9BEBD10C1BF2C84E00FE8CFB /* MeeTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeTabBar.m; sourceTree = "<group>"; };
 		9BF01C5B1BF6C0B50004E78D /* MeeTagTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeTagTableViewController.h; sourceTree = "<group>"; };
 		9BF01C5C1BF6C0B50004E78D /* MeeTagTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeTagTableViewController.m; sourceTree = "<group>"; };
+		9BF01C631BF729CE0004E78D /* MeeHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeHTTPSessionManager.h; sourceTree = "<group>"; };
+		9BF01C641BF729CE0004E78D /* MeeHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeHTTPSessionManager.m; sourceTree = "<group>"; };
+		9BF01C661BF72CEC0004E78D /* MeeConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeConst.h; sourceTree = "<group>"; };
+		9BF01C671BF72CEC0004E78D /* MeeConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeConst.m; sourceTree = "<group>"; };
+		9BF01C691BF7326D0004E78D /* MeeTagModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeTagModel.h; sourceTree = "<group>"; };
+		9BF01C6A1BF7326D0004E78D /* MeeTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeTagModel.m; sourceTree = "<group>"; };
+		9BF01C6C1BF737E60004E78D /* MeeTagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeTagTableViewCell.h; sourceTree = "<group>"; };
+		9BF01C6D1BF737E60004E78D /* MeeTagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeTagTableViewCell.m; sourceTree = "<group>"; };
+		9BF01C6E1BF737E60004E78D /* MeeTagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeeTagTableViewCell.xib; sourceTree = "<group>"; };
+		9BF01C711BF742080004E78D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		9BF01C721BF742080004E78D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		9BFA44341BEDAD66007DD99E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BFA44351BEDAD66007DD99E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9BFA44381BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+MeeBarButtonItem.h"; sourceTree = "<group>"; };
@@ -75,6 +95,7 @@
 		9BFA81E01BEAF7E500AA71B5 /* MeeBSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeeBSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFA81E41BEAF7E500AA71B5 /* MeeBSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeeBSUITests.m; sourceTree = "<group>"; };
 		9BFA81E61BEAF7E500AA71B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D38C993FA7D182A9E412698B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268EF97BA0D98B4E7647092B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +124,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CEA85B485F84DC179A5CB25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C0BE653616906A83AD39529 /* Pods.debug.xcconfig */,
+				184A2A2B2FC4F4BAC3F66B1D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9B47C2F21BED7F7B0060F6CD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +170,8 @@
 		9B47C2F51BED7F7B0060F6CD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9BF01C691BF7326D0004E78D /* MeeTagModel.h */,
+				9BF01C6A1BF7326D0004E78D /* MeeTagModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +179,9 @@
 		9B47C2F61BED7F7B0060F6CD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9BF01C6C1BF737E60004E78D /* MeeTagTableViewCell.h */,
+				9BF01C6D1BF737E60004E78D /* MeeTagTableViewCell.m */,
+				9BF01C6E1BF737E60004E78D /* MeeTagTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,14 +325,18 @@
 		9B47C3071BED7F7B0060F6CD /* Other-其他 */ = {
 			isa = PBXGroup;
 			children = (
-				9BFA44371BEE1E56007DD99E /* Category */,
 				9BFA44341BEDAD66007DD99E /* main.m */,
 				9BFA44351BEDAD66007DD99E /* PrefixHeader.pch */,
 				9B47C3081BED7F7B0060F6CD /* AppDelegate.h */,
 				9B47C3091BED7F7B0060F6CD /* AppDelegate.m */,
+				9BFA44371BEE1E56007DD99E /* Category */,
 				9B47C30A1BED7F7B0060F6CD /* Controller */,
 				9B47C30B1BED7F7B0060F6CD /* Model */,
 				9B47C30C1BED7F7B0060F6CD /* View */,
+				9BF01C631BF729CE0004E78D /* MeeHTTPSessionManager.h */,
+				9BF01C641BF729CE0004E78D /* MeeHTTPSessionManager.m */,
+				9BF01C661BF72CEC0004E78D /* MeeConst.h */,
+				9BF01C671BF72CEC0004E78D /* MeeConst.m */,
 			);
 			path = "Other-其他";
 			sourceTree = "<group>";
@@ -367,6 +407,8 @@
 		9BFA44371BEE1E56007DD99E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				9BF01C711BF742080004E78D /* UIView+Frame.h */,
+				9BF01C721BF742080004E78D /* UIView+Frame.m */,
 				9BFA44381BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.h */,
 				9BFA44391BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.m */,
 			);
@@ -380,6 +422,8 @@
 				9BFA81D81BEAF7E500AA71B5 /* MeeBSTests */,
 				9BFA81E31BEAF7E500AA71B5 /* MeeBSUITests */,
 				9BFA81BD1BEAF7E500AA71B5 /* Products */,
+				5CEA85B485F84DC179A5CB25 /* Pods */,
+				E7EAA70FD1DE76B47D26DB1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -429,6 +473,14 @@
 			path = MeeBSUITests;
 			sourceTree = "<group>";
 		};
+		E7EAA70FD1DE76B47D26DB1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D38C993FA7D182A9E412698B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -436,9 +488,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BFA81E91BEAF7E500AA71B5 /* Build configuration list for PBXNativeTarget "MeeBS" */;
 			buildPhases = (
+				9D68EB582CEEEFA37283F161 /* Check Pods Manifest.lock */,
 				9BFA81B81BEAF7E500AA71B5 /* Sources */,
 				9BFA81B91BEAF7E500AA71B5 /* Frameworks */,
 				9BFA81BA1BEAF7E500AA71B5 /* Resources */,
+				3A217AB56B1D17FC89EA2971 /* Embed Pods Frameworks */,
+				95AB9FB2FE1CD6A0E1CC8F15 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -533,6 +588,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF01C701BF737E60004E78D /* MeeTagTableViewCell.xib in Resources */,
 				9BFA81CC1BEAF7E500AA71B5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,15 +609,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A217AB56B1D17FC89EA2971 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95AB9FB2FE1CD6A0E1CC8F15 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D68EB582CEEEFA37283F161 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9BFA81B81BEAF7E500AA71B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9BEBD10D1BF2C84E00FE8CFB /* MeeTabBar.m in Sources */,
+				9BF01C6B1BF7326D0004E78D /* MeeTagModel.m in Sources */,
 				9B47C3151BED80E80060F6CD /* MeeTabBarController.m in Sources */,
 				9B47C3241BED83450060F6CD /* MeeNewViewController.m in Sources */,
+				9BF01C651BF729CE0004E78D /* MeeHTTPSessionManager.m in Sources */,
 				9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */,
+				9BF01C6F1BF737E60004E78D /* MeeTagTableViewCell.m in Sources */,
 				9B47C31B1BED82F30060F6CD /* MeeEssenceViewController.m in Sources */,
 				9B47C3211BED83200060F6CD /* MeeMeViewController.m in Sources */,
 				9BFA443A1BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.m in Sources */,
@@ -569,7 +676,9 @@
 				9BF01C5D1BF6C0B50004E78D /* MeeTagTableViewController.m in Sources */,
 				9B47C31E1BED83120060F6CD /* MeeFriendTrendsViewController.m in Sources */,
 				9BFA44361BEDAD66007DD99E /* main.m in Sources */,
+				9BF01C731BF742080004E78D /* UIView+Frame.m in Sources */,
 				9B47C3181BED810F0060F6CD /* MeeNavigationController.m in Sources */,
+				9BF01C681BF72CEC0004E78D /* MeeConst.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +796,7 @@
 		};
 		9BFA81EA1BEAF7E500AA71B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C0BE653616906A83AD39529 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -700,6 +810,7 @@
 		};
 		9BFA81EB1BEAF7E500AA71B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 184A2A2B2FC4F4BAC3F66B1D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

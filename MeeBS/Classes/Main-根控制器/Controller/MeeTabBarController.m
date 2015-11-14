@@ -68,7 +68,7 @@
 - (void)setupOneChildVc:(UIViewController *) vc andTitle:(NSString *)title andImage:(NSString *)image andSelectImage:(NSString *)selectImage
 {
     UINavigationController *nav = [[MeeNavigationController alloc]initWithRootViewController:vc];
-    vc.view.backgroundColor = MeeRandomColor ;
+    vc.view.backgroundColor = MeeBgColor;
     vc.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImage];
