@@ -7,6 +7,7 @@
 //
 
 #import "MeeEssenceViewController.h"
+#import "MeeTagTableViewController.h"
 
 @interface MeeEssenceViewController ()
 
@@ -43,7 +44,10 @@
 #pragma mark - 导航条左边的按钮点击事件
 - (void)leftBaeButtonClick
 {
-    NSLog(@"sss - %s - %zd",__func__,__LINE__);
+    // 进入推荐标签的子控制器
+    MeeTagTableViewController *tagVc = [[MeeTagTableViewController alloc]init];
+ 
+    [self.navigationController pushViewController:tagVc animated:YES];
 }
 
 // 因为很多控制器，都要写这段代码，所以抽成 UIBarButtonItem的分类
