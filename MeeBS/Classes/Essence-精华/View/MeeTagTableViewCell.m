@@ -29,8 +29,7 @@
 - (void)setTagModel:(MeeTagModel *)tagModel
 {
     _tagModel = tagModel;
-    
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:tagModel.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+
     
     self.titleLabel.text = tagModel.theme_name;
     
@@ -40,6 +39,13 @@
     }else{
          self.likeCountLabel.text  = [NSString stringWithFormat:@"%zd人订阅",tagModel.sub_number];
     }
+    
+    
+    
+    // [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:tagModel.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    [self.headerImageView setHeaderImage:tagModel.image_list];
+
 }
 
 // 设置cell之间的间距

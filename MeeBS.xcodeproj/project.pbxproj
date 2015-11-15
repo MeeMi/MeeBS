@@ -16,6 +16,8 @@
 		9B47C3211BED83200060F6CD /* MeeMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3201BED83200060F6CD /* MeeMeViewController.m */; };
 		9B47C3241BED83450060F6CD /* MeeNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3231BED83450060F6CD /* MeeNewViewController.m */; };
 		9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3261BED835F0060F6CD /* MeePulishViewController.m */; };
+		9BE8BDB21BF81F9C00B75E7B /* UIImage+MeeCircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8BDB11BF81F9C00B75E7B /* UIImage+MeeCircleImage.m */; };
+		9BE8BDB51BF8241000B75E7B /* UIImageView+MeeHeaderImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8BDB41BF8241000B75E7B /* UIImageView+MeeHeaderImage.m */; };
 		9BEBD10D1BF2C84E00FE8CFB /* MeeTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBD10C1BF2C84E00FE8CFB /* MeeTabBar.m */; };
 		9BF01C5D1BF6C0B50004E78D /* MeeTagTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01C5C1BF6C0B50004E78D /* MeeTagTableViewController.m */; };
 		9BF01C651BF729CE0004E78D /* MeeHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01C641BF729CE0004E78D /* MeeHTTPSessionManager.m */; };
@@ -67,6 +69,10 @@
 		9B47C3231BED83450060F6CD /* MeeNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeNewViewController.m; sourceTree = "<group>"; };
 		9B47C3251BED835F0060F6CD /* MeePulishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeePulishViewController.h; sourceTree = "<group>"; };
 		9B47C3261BED835F0060F6CD /* MeePulishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeePulishViewController.m; sourceTree = "<group>"; };
+		9BE8BDB01BF81F9C00B75E7B /* UIImage+MeeCircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MeeCircleImage.h"; sourceTree = "<group>"; };
+		9BE8BDB11BF81F9C00B75E7B /* UIImage+MeeCircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MeeCircleImage.m"; sourceTree = "<group>"; };
+		9BE8BDB31BF8241000B75E7B /* UIImageView+MeeHeaderImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MeeHeaderImage.h"; sourceTree = "<group>"; };
+		9BE8BDB41BF8241000B75E7B /* UIImageView+MeeHeaderImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MeeHeaderImage.m"; sourceTree = "<group>"; };
 		9BEBD10B1BF2C84E00FE8CFB /* MeeTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeTabBar.h; sourceTree = "<group>"; };
 		9BEBD10C1BF2C84E00FE8CFB /* MeeTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeTabBar.m; sourceTree = "<group>"; };
 		9BF01C5B1BF6C0B50004E78D /* MeeTagTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeTagTableViewController.h; sourceTree = "<group>"; };
@@ -411,6 +417,10 @@
 				9BF01C721BF742080004E78D /* UIView+Frame.m */,
 				9BFA44381BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.h */,
 				9BFA44391BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.m */,
+				9BE8BDB01BF81F9C00B75E7B /* UIImage+MeeCircleImage.h */,
+				9BE8BDB11BF81F9C00B75E7B /* UIImage+MeeCircleImage.m */,
+				9BE8BDB31BF8241000B75E7B /* UIImageView+MeeHeaderImage.h */,
+				9BE8BDB41BF8241000B75E7B /* UIImageView+MeeHeaderImage.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -666,6 +676,7 @@
 				9BF01C6B1BF7326D0004E78D /* MeeTagModel.m in Sources */,
 				9B47C3151BED80E80060F6CD /* MeeTabBarController.m in Sources */,
 				9B47C3241BED83450060F6CD /* MeeNewViewController.m in Sources */,
+				9BE8BDB21BF81F9C00B75E7B /* UIImage+MeeCircleImage.m in Sources */,
 				9BF01C651BF729CE0004E78D /* MeeHTTPSessionManager.m in Sources */,
 				9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */,
 				9BF01C6F1BF737E60004E78D /* MeeTagTableViewCell.m in Sources */,
@@ -674,6 +685,7 @@
 				9BFA443A1BEE1E82007DD99E /* UIBarButtonItem+MeeBarButtonItem.m in Sources */,
 				9B47C3111BED7F7B0060F6CD /* AppDelegate.m in Sources */,
 				9BF01C5D1BF6C0B50004E78D /* MeeTagTableViewController.m in Sources */,
+				9BE8BDB51BF8241000B75E7B /* UIImageView+MeeHeaderImage.m in Sources */,
 				9B47C31E1BED83120060F6CD /* MeeFriendTrendsViewController.m in Sources */,
 				9BFA44361BEDAD66007DD99E /* main.m in Sources */,
 				9BF01C731BF742080004E78D /* UIView+Frame.m in Sources */,
