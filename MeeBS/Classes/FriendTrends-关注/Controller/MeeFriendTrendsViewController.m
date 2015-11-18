@@ -29,4 +29,17 @@
 }
 
 
+
+
+// 当一个控制器modal多个控制器,可以在这个方法在统一管理返回
+/**
+ *  这个方法的作用:用来让其他控制器回到当前控制器
+ *  必备格式:1.IBAction 2.有1个UIStoryboardSegue *参数
+ */
+- (IBAction)backToThisController:(UIStoryboardSegue *)segues
+{
+    // 获取还回的控制器
+    // NSLog(@"%@",segues.sourceViewController);
+}
+
 @end

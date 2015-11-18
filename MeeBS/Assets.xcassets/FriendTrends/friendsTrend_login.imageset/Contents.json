@@ -1,6 +1,20 @@
 {
   "images" : [
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 23,
+          "top" : 24,
+          "right" : 119,
+          "left" : 123
+        }
+      },
       "idiom" : "universal",
       "filename" : "friendsTrend_login.png",
       "scale" : "1x"

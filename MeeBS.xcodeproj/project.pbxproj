@@ -16,6 +16,9 @@
 		9B47C3211BED83200060F6CD /* MeeMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3201BED83200060F6CD /* MeeMeViewController.m */; };
 		9B47C3241BED83450060F6CD /* MeeNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3231BED83450060F6CD /* MeeNewViewController.m */; };
 		9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B47C3261BED835F0060F6CD /* MeePulishViewController.m */; };
+		9BB666FC1BFC0A460082B620 /* MeeLoginRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB666FB1BFC0A460082B620 /* MeeLoginRegisterController.m */; };
+		9BB6673D1BFC1D2F0082B620 /* MeeFriendTrendsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB6673C1BFC1D2F0082B620 /* MeeFriendTrendsViewController.storyboard */; };
+		9BB667401BFC28C50082B620 /* MeeLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB6673F1BFC28C50082B620 /* MeeLoginButton.m */; };
 		9BE8BDB21BF81F9C00B75E7B /* UIImage+MeeCircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8BDB11BF81F9C00B75E7B /* UIImage+MeeCircleImage.m */; };
 		9BE8BDB51BF8241000B75E7B /* UIImageView+MeeHeaderImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8BDB41BF8241000B75E7B /* UIImageView+MeeHeaderImage.m */; };
 		9BEBD10D1BF2C84E00FE8CFB /* MeeTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBD10C1BF2C84E00FE8CFB /* MeeTabBar.m */; };
@@ -69,6 +72,11 @@
 		9B47C3231BED83450060F6CD /* MeeNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeNewViewController.m; sourceTree = "<group>"; };
 		9B47C3251BED835F0060F6CD /* MeePulishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeePulishViewController.h; sourceTree = "<group>"; };
 		9B47C3261BED835F0060F6CD /* MeePulishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeePulishViewController.m; sourceTree = "<group>"; };
+		9BB666FA1BFC0A460082B620 /* MeeLoginRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeLoginRegisterController.h; sourceTree = "<group>"; };
+		9BB666FB1BFC0A460082B620 /* MeeLoginRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeLoginRegisterController.m; sourceTree = "<group>"; };
+		9BB6673C1BFC1D2F0082B620 /* MeeFriendTrendsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeeFriendTrendsViewController.storyboard; sourceTree = "<group>"; };
+		9BB6673E1BFC28C50082B620 /* MeeLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeLoginButton.h; sourceTree = "<group>"; };
+		9BB6673F1BFC28C50082B620 /* MeeLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeLoginButton.m; sourceTree = "<group>"; };
 		9BE8BDB01BF81F9C00B75E7B /* UIImage+MeeCircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MeeCircleImage.h"; sourceTree = "<group>"; };
 		9BE8BDB11BF81F9C00B75E7B /* UIImage+MeeCircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MeeCircleImage.m"; sourceTree = "<group>"; };
 		9BE8BDB31BF8241000B75E7B /* UIImageView+MeeHeaderImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MeeHeaderImage.h"; sourceTree = "<group>"; };
@@ -207,6 +215,9 @@
 			children = (
 				9B47C31C1BED83120060F6CD /* MeeFriendTrendsViewController.h */,
 				9B47C31D1BED83120060F6CD /* MeeFriendTrendsViewController.m */,
+				9BB666FA1BFC0A460082B620 /* MeeLoginRegisterController.h */,
+				9BB666FB1BFC0A460082B620 /* MeeLoginRegisterController.m */,
+				9BB6673C1BFC1D2F0082B620 /* MeeFriendTrendsViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +232,8 @@
 		9B47C2FA1BED7F7B0060F6CD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9BB6673E1BFC28C50082B620 /* MeeLoginButton.h */,
+				9BB6673F1BFC28C50082B620 /* MeeLoginButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -598,6 +611,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BB6673D1BFC1D2F0082B620 /* MeeFriendTrendsViewController.storyboard in Resources */,
 				9BF01C701BF737E60004E78D /* MeeTagTableViewCell.xib in Resources */,
 				9BFA81CC1BEAF7E500AA71B5 /* Assets.xcassets in Resources */,
 			);
@@ -672,12 +686,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BB666FC1BFC0A460082B620 /* MeeLoginRegisterController.m in Sources */,
 				9BEBD10D1BF2C84E00FE8CFB /* MeeTabBar.m in Sources */,
 				9BF01C6B1BF7326D0004E78D /* MeeTagModel.m in Sources */,
 				9B47C3151BED80E80060F6CD /* MeeTabBarController.m in Sources */,
 				9B47C3241BED83450060F6CD /* MeeNewViewController.m in Sources */,
 				9BE8BDB21BF81F9C00B75E7B /* UIImage+MeeCircleImage.m in Sources */,
 				9BF01C651BF729CE0004E78D /* MeeHTTPSessionManager.m in Sources */,
+				9BB667401BFC28C50082B620 /* MeeLoginButton.m in Sources */,
 				9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */,
 				9BF01C6F1BF737E60004E78D /* MeeTagTableViewCell.m in Sources */,
 				9B47C31B1BED82F30060F6CD /* MeeEssenceViewController.m in Sources */,
