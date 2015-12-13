@@ -18,7 +18,6 @@
 #define MeeBgColor MeeGrayColor(206)
 
 
-#import "UIBarButtonItem+MeeBarButtonItem.h"
 
 
 // 屏幕的宽高
@@ -33,6 +32,8 @@
 
 #import "UIImageView+MeeHeaderImage.h"
 
+// 分类
+#import "UIBarButtonItem+MeeBarButtonItem.h"
 
 
 #endif
