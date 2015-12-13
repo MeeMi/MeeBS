@@ -36,6 +36,7 @@
 		9BFA81E51BEAF7E500AA71B5 /* MeeBSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA81E41BEAF7E500AA71B5 /* MeeBSUITests.m */; };
 		9C90B8F41C1D11200099F410 /* MeeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8F31C1D11200099F410 /* MeeTextField.m */; };
 		9C90B8F71C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8F61C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m */; };
+		9C90B8FE1C1DA23F0099F410 /* MeeMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8FD1C1DA23F0099F410 /* MeeMeCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,8 @@
 		9C90B8F31C1D11200099F410 /* MeeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeTextField.m; sourceTree = "<group>"; };
 		9C90B8F51C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+MeeExtensionPlaceholderColor.h"; sourceTree = "<group>"; };
 		9C90B8F61C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MeeExtensionPlaceholderColor.m"; sourceTree = "<group>"; };
+		9C90B8FC1C1DA23F0099F410 /* MeeMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeMeCell.h; sourceTree = "<group>"; };
+		9C90B8FD1C1DA23F0099F410 /* MeeMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeMeCell.m; sourceTree = "<group>"; };
 		D38C993FA7D182A9E412698B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -312,6 +315,8 @@
 		9B47C3021BED7F7B0060F6CD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9C90B8FC1C1DA23F0099F410 /* MeeMeCell.h */,
+				9C90B8FD1C1DA23F0099F410 /* MeeMeCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -719,6 +724,7 @@
 				9BF01C731BF742080004E78D /* UIView+Frame.m in Sources */,
 				9B47C3181BED810F0060F6CD /* MeeNavigationController.m in Sources */,
 				9BF01C681BF72CEC0004E78D /* MeeConst.m in Sources */,
+				9C90B8FE1C1DA23F0099F410 /* MeeMeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

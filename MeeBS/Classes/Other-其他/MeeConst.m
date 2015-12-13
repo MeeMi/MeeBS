@@ -10,3 +10,6 @@
 
 // 设置统一请求的url
 NSString * const MeeBaseUrl = @"http://api.budejie.com/api/api_open.php";
+
+// 设置统一的间距
+NSInteger const MeeMargin = 10;

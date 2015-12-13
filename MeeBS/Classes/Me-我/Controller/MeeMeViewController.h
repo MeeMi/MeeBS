@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MeeMeViewController : UIViewController
+@interface MeeMeViewController : UITableViewController
 
 @end

@@ -30,10 +30,11 @@
 
 #import "UIView+Frame.h"
 
-#import "UIImageView+MeeHeaderImage.h"
+
 
 // 分类
 #import "UIBarButtonItem+MeeBarButtonItem.h"
-
+#import "UIImage+MeeCircleImage.h"
+#import "UIImageView+MeeHeaderImage.h"
 
 #endif

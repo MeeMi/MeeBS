@@ -21,5 +21,6 @@
 // 添加引用
 UIKIT_EXTERN NSString * const MeeBaseUrl;
 
+UIKIT_EXTERN NSInteger const MeeMargin;
 
 @end
