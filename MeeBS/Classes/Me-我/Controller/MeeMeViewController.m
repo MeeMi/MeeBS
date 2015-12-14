@@ -8,7 +8,7 @@
 
 #import "MeeMeViewController.h"
 #import "MeeMeCell.h"
-
+#import "MeeFooterView.h"
 
 static  NSString * const ID = @"cell";
 
@@ -39,9 +39,9 @@ static  NSString * const ID = @"cell";
 {
     // 设置tableView的样式
     self.tableView.rowHeight = 54;
-    // 设置tableView每一块的 头部和尾部的高度
-    self.tableView.sectionHeaderHeight = 10;
-    self.tableView.sectionFooterHeight = 10;
+    // 设置tableView每一块的 头部和尾部的高度（失效了）
+    // self.tableView.sectionHeaderHeight = 10;
+    // self.tableView.sectionFooterHeight = 10;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
@@ -49,7 +49,10 @@ static  NSString * const ID = @"cell";
     //self.tableView.style = UITableViewStyleGrouped;
     // 注册cell(加载cell)
     // [self.tableView registerClass:[MeeMeCell class] forCellReuseIdentifier:ID];
-   
+    
+    // 添加footView
+    MeeFooterView *footView = [[MeeFooterView alloc]init];;
+    self.tableView.tableFooterView = footView;
     
 }
 
