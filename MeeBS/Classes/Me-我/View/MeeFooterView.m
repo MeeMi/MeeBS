@@ -13,6 +13,8 @@
 
 #import "MeeSquareModel.h"
 #import "MeeButton.h"
+
+#import "MeeWebController.h"
 @implementation MeeFooterView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -64,6 +66,7 @@
         // btn.height = buttonH - 1;
         btn.width = buttonW;
         btn.height = buttonH;
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:btn];
     }
     
@@ -79,7 +82,45 @@
     tableView.tableFooterView = self;
 }
 
+- (void)btnClick:(MeeButton *)btn
+{
+    MeeSquareModel *squareModel = btn.squareModel;
+    if ([squareModel.url hasPrefix:@"mod://"]) {
+        if ([squareModel.url hasSuffix:@"BDJ_To_Check"]) {
+            NSLog(@"跳转【%@】控制器",squareModel.name);
+        }else if([squareModel.url hasSuffix:@"BDJ_To_RecentHot"]) {
+            NSLog(@"跳转【%@】控制器",squareModel.name);
+        }else if([squareModel.url hasSuffix:@"BDJ_To_RankingList"]) {
+            NSLog(@"跳转【%@】控制器",squareModel.name);
+        }else{
+            NSLog(@"其他控制器");
+        }
+    }else if([squareModel.url hasPrefix:@"http://"]){
+        // 跳转到webView控制器
+        MeeWebController *webVc = [[MeeWebController alloc]init];
+        webVc.title = squareModel.name;
+        webVc.urlString = squareModel.url;
+        // footView 获取控制器，然后push进去 webVc控制器
+        
+        // 1.获取window的根控制器
+        // NSLog(@"%@",[self.window.rootViewController class]);
+        UITabBarController *tabVc = (UITabBarController *)self.window.rootViewController;
+        // 2.获取footView所在的导航控制器
+        // tabVc.childViewControllers[] 需要知道那个导航控制器被点击
+        UINavigationController *nav = tabVc.selectedViewController; //  获取根控制器中，被选中的控制器
+        // 3.push
+        [nav pushViewController:webVc animated:YES];
+        
+        
+    }else{
+        NSLog(@"其他");
+    }
+    
+}
+
+
 
 
 
 @end
+
