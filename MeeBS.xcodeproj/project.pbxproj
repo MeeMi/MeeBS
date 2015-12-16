@@ -37,6 +37,12 @@
 		9C69A5561C2104DF007EE398 /* MeeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A5551C2104DF007EE398 /* MeeButton.m */; };
 		9C69A55A1C2126EC007EE398 /* MeeWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A5581C2126EC007EE398 /* MeeWebController.m */; };
 		9C69A55B1C2126EC007EE398 /* MeeWebController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C69A5591C2126EC007EE398 /* MeeWebController.xib */; };
+		9C69A55E1C2142D5007EE398 /* MeeSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A55D1C2142D5007EE398 /* MeeSettingViewController.m */; };
+		9C69A5631C215758007EE398 /* MeeClearCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A5621C215758007EE398 /* MeeClearCell.m */; };
+		9C69A5671C215772007EE398 /* MeeSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A5651C215772007EE398 /* MeeSettingCell.m */; };
+		9C69A5681C215772007EE398 /* MeeSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C69A5661C215772007EE398 /* MeeSettingCell.xib */; };
+		9C69A56C1C215AFE007EE398 /* MeeOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A56A1C215AFE007EE398 /* MeeOtherCell.m */; };
+		9C69A56D1C215AFE007EE398 /* MeeOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C69A56B1C215AFE007EE398 /* MeeOtherCell.xib */; };
 		9C83847F1C1EC0860043641A /* MeeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C83847E1C1EC0860043641A /* MeeFooterView.m */; };
 		9C8384821C1EC4D10043641A /* MeeSquareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8384811C1EC4D10043641A /* MeeSquareModel.m */; };
 		9C90B8F41C1D11200099F410 /* MeeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8F31C1D11200099F410 /* MeeTextField.m */; };
@@ -122,6 +128,16 @@
 		9C69A5571C2126EC007EE398 /* MeeWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeWebController.h; sourceTree = "<group>"; };
 		9C69A5581C2126EC007EE398 /* MeeWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeWebController.m; sourceTree = "<group>"; };
 		9C69A5591C2126EC007EE398 /* MeeWebController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeeWebController.xib; sourceTree = "<group>"; };
+		9C69A55C1C2142D5007EE398 /* MeeSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeSettingViewController.h; sourceTree = "<group>"; };
+		9C69A55D1C2142D5007EE398 /* MeeSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeSettingViewController.m; sourceTree = "<group>"; };
+		9C69A5611C215758007EE398 /* MeeClearCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeClearCell.h; sourceTree = "<group>"; };
+		9C69A5621C215758007EE398 /* MeeClearCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeClearCell.m; sourceTree = "<group>"; };
+		9C69A5641C215772007EE398 /* MeeSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeSettingCell.h; sourceTree = "<group>"; };
+		9C69A5651C215772007EE398 /* MeeSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeSettingCell.m; sourceTree = "<group>"; };
+		9C69A5661C215772007EE398 /* MeeSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeeSettingCell.xib; sourceTree = "<group>"; };
+		9C69A5691C215AFE007EE398 /* MeeOtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeOtherCell.h; sourceTree = "<group>"; };
+		9C69A56A1C215AFE007EE398 /* MeeOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeOtherCell.m; sourceTree = "<group>"; };
+		9C69A56B1C215AFE007EE398 /* MeeOtherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeeOtherCell.xib; sourceTree = "<group>"; };
 		9C83847D1C1EC0860043641A /* MeeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeFooterView.h; sourceTree = "<group>"; };
 		9C83847E1C1EC0860043641A /* MeeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeFooterView.m; sourceTree = "<group>"; };
 		9C8384801C1EC4D10043641A /* MeeSquareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeSquareModel.h; sourceTree = "<group>"; };
@@ -318,6 +334,8 @@
 				9C69A5571C2126EC007EE398 /* MeeWebController.h */,
 				9C69A5581C2126EC007EE398 /* MeeWebController.m */,
 				9C69A5591C2126EC007EE398 /* MeeWebController.xib */,
+				9C69A55C1C2142D5007EE398 /* MeeSettingViewController.h */,
+				9C69A55D1C2142D5007EE398 /* MeeSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -334,12 +352,10 @@
 		9B47C3021BED7F7B0060F6CD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9C69A5601C21571B007EE398 /* setting */,
+				9C69A55F1C21570A007EE398 /* footView */,
 				9C90B8FC1C1DA23F0099F410 /* MeeMeCell.h */,
 				9C90B8FD1C1DA23F0099F410 /* MeeMeCell.m */,
-				9C83847D1C1EC0860043641A /* MeeFooterView.h */,
-				9C83847E1C1EC0860043641A /* MeeFooterView.m */,
-				9C69A5541C2104DF007EE398 /* MeeButton.h */,
-				9C69A5551C2104DF007EE398 /* MeeButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -534,6 +550,32 @@
 			path = MeeBSUITests;
 			sourceTree = "<group>";
 		};
+		9C69A55F1C21570A007EE398 /* footView */ = {
+			isa = PBXGroup;
+			children = (
+				9C83847D1C1EC0860043641A /* MeeFooterView.h */,
+				9C83847E1C1EC0860043641A /* MeeFooterView.m */,
+				9C69A5541C2104DF007EE398 /* MeeButton.h */,
+				9C69A5551C2104DF007EE398 /* MeeButton.m */,
+			);
+			name = footView;
+			sourceTree = "<group>";
+		};
+		9C69A5601C21571B007EE398 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				9C69A5611C215758007EE398 /* MeeClearCell.h */,
+				9C69A5621C215758007EE398 /* MeeClearCell.m */,
+				9C69A5641C215772007EE398 /* MeeSettingCell.h */,
+				9C69A5651C215772007EE398 /* MeeSettingCell.m */,
+				9C69A5661C215772007EE398 /* MeeSettingCell.xib */,
+				9C69A5691C215AFE007EE398 /* MeeOtherCell.h */,
+				9C69A56A1C215AFE007EE398 /* MeeOtherCell.m */,
+				9C69A56B1C215AFE007EE398 /* MeeOtherCell.xib */,
+			);
+			name = setting;
+			sourceTree = "<group>";
+		};
 		E7EAA70FD1DE76B47D26DB1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -650,6 +692,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB6673D1BFC1D2F0082B620 /* MeeFriendTrendsViewController.storyboard in Resources */,
+				9C69A5681C215772007EE398 /* MeeSettingCell.xib in Resources */,
+				9C69A56D1C215AFE007EE398 /* MeeOtherCell.xib in Resources */,
 				9BF01C701BF737E60004E78D /* MeeTagTableViewCell.xib in Resources */,
 				9C69A55B1C2126EC007EE398 /* MeeWebController.xib in Resources */,
 				9BFA81CC1BEAF7E500AA71B5 /* Assets.xcassets in Resources */,
@@ -725,9 +769,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C69A55E1C2142D5007EE398 /* MeeSettingViewController.m in Sources */,
 				9BB666FC1BFC0A460082B620 /* MeeLoginRegisterController.m in Sources */,
+				9C69A56C1C215AFE007EE398 /* MeeOtherCell.m in Sources */,
 				9BEBD10D1BF2C84E00FE8CFB /* MeeTabBar.m in Sources */,
 				9C69A55A1C2126EC007EE398 /* MeeWebController.m in Sources */,
+				9C69A5671C215772007EE398 /* MeeSettingCell.m in Sources */,
 				9C90B8F71C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m in Sources */,
 				9BF01C6B1BF7326D0004E78D /* MeeTagModel.m in Sources */,
 				9B47C3151BED80E80060F6CD /* MeeTabBarController.m in Sources */,
@@ -751,6 +798,7 @@
 				9BFA44361BEDAD66007DD99E /* main.m in Sources */,
 				9BF01C731BF742080004E78D /* UIView+Frame.m in Sources */,
 				9B47C3181BED810F0060F6CD /* MeeNavigationController.m in Sources */,
+				9C69A5631C215758007EE398 /* MeeClearCell.m in Sources */,
 				9BF01C681BF72CEC0004E78D /* MeeConst.m in Sources */,
 				9C90B8FE1C1DA23F0099F410 /* MeeMeCell.m in Sources */,
 			);

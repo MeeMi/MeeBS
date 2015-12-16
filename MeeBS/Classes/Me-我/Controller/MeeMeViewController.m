@@ -10,6 +10,8 @@
 #import "MeeMeCell.h"
 #import "MeeFooterView.h"
 
+#import "MeeSettingViewController.h"
+
 static  NSString * const ID = @"cell";
 
 @interface MeeMeViewController ()
@@ -39,12 +41,11 @@ static  NSString * const ID = @"cell";
 {
     // 设置tableView的样式
     self.tableView.rowHeight = 54;
-    // 设置tableView每一块的 头部和尾部的高度（失效了）
-    // self.tableView.sectionHeaderHeight = 10;
-    // self.tableView.sectionFooterHeight = 10;
+    // 设置tableView每一块的 头部和尾部的高度（需要把tableView的模式设置为Group才会有效）
+    self.tableView.sectionHeaderHeight = 0;
+    self.tableView.sectionFooterHeight = 10;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(MeeMargin-35, 0, 0, 0);
     
     //self.tableView.style = UITableViewStyleGrouped;
     // 注册cell(加载cell)
@@ -92,10 +93,10 @@ static  NSString * const ID = @"cell";
 
 
 // 设置每组的底部高度
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 10;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//    return 10;
+//}
 
 // 点击cell选中调用
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -112,7 +113,9 @@ static  NSString * const ID = @"cell";
 
 - (void)settingClick
 {
-    NSLog(@"sss - %s - %zd",__func__,__LINE__);
+    // NSLog(@"sss - %s - %zd",__func__,__LINE__);
+    MeeSettingViewController *settingVc = [[MeeSettingViewController alloc]initWithStyle:UITableViewStyleGrouped];
+    [self.navigationController pushViewController:settingVc animated:YES];
 }
 
 @end

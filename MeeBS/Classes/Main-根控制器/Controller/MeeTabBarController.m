@@ -56,7 +56,7 @@
     [self addChildViewController:nav2];
      */
     
-    [self setupOneChildVc:[[MeeMeViewController alloc]init] andTitle:@"我" andImage:@"tabBar_me_icon" andSelectImage:@"tabBar_me_click_icon"];
+    [self setupOneChildVc:[[MeeMeViewController alloc]initWithStyle:UITableViewStyleGrouped] andTitle:@"我" andImage:@"tabBar_me_icon" andSelectImage:@"tabBar_me_click_icon"];
     
     [self setupOneChildVc:[[MeeEssenceViewController alloc]init] andTitle:@"精华" andImage:@"tabBar_essence_icon" andSelectImage:@"tabBar_essence_click_icon"];
     [self setupOneChildVc:[[MeeNewViewController alloc]init] andTitle:@"新帖" andImage:@"tabBar_new_icon" andSelectImage:@"tabBar_new_click_icon"];
