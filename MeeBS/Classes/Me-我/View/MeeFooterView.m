@@ -12,6 +12,7 @@
 #import <MJExtension.h>
 
 #import "MeeSquareModel.h"
+#import "MeeButton.h"
 @implementation MeeFooterView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -53,16 +54,29 @@
     // 每个方块的宽度，高度
     CGFloat buttonW = MeeScreenW / rowCount;
     CGFloat buttonH = buttonW;
-    NSLog(@"---> %zd",array.count);
+ 
     for (int i = 0; i < array.count; i++) {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        MeeButton *btn = [MeeButton buttonWithType:UIButtonTypeCustom];
+        btn.squareModel = array[i];
         btn.x = (i % rowCount) * buttonW;
         btn.y = (i / rowCount) * buttonH;
+        // btn.width = buttonW - 1;
+        // btn.height = buttonH - 1;
         btn.width = buttonW;
         btn.height = buttonH;
-        btn.backgroundColor = MeeRandomColor;
         [self addSubview:btn];
     }
+    
+    // 出现一个小问题，当向上拖footView查看最后一个 Button的时候，松开手的时候没有设置 Button有回弹到原来的位置
+    // 原因：没有设置footView的高度
+    // 解决：获取获取最后一个Button获取最大的y值，设置footView的高度
+    // NSLog(@"----> %zd",self.subviews.count);
+    MeeButton *lastButton = [self.subviews lastObject];
+    self.height = CGRectGetMaxY(lastButton.frame);
+    // 因为是自定义的footView是先添加的footView后设置的高度，所以设置的高度不起作用
+    // 解决方式：先设置高度 后添加 footView，所以获取footView，重新在添加一次 footView
+    UITableView *tableView = (UITableView *)self.superview;
+    tableView.tableFooterView = self;
 }
 
 
