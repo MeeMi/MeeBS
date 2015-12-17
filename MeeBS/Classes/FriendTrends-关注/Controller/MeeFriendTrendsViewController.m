@@ -25,7 +25,8 @@
 #pragma mark - 导航条左边的按钮点击事件
 - (void)leftBaeButtonClick
 {
-    NSLog(@"sss - %s - %zd",__func__,__LINE__);
+    // 通过自指定的标签跳转到对应的控制器 segues
+    [self performSegueWithIdentifier:@"friend2category" sender:nil];
 }
 
 

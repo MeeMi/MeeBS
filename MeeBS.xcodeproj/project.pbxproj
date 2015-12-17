@@ -34,6 +34,7 @@
 		9BFA81CC1BEAF7E500AA71B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA81CB1BEAF7E500AA71B5 /* Assets.xcassets */; };
 		9BFA81DA1BEAF7E500AA71B5 /* MeeBSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA81D91BEAF7E500AA71B5 /* MeeBSTests.m */; };
 		9BFA81E51BEAF7E500AA71B5 /* MeeBSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA81E41BEAF7E500AA71B5 /* MeeBSUITests.m */; };
+		9C00BA421C2303150058A850 /* MeeCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C00BA411C2303150058A850 /* MeeCategoryViewController.m */; };
 		9C69A5561C2104DF007EE398 /* MeeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A5551C2104DF007EE398 /* MeeButton.m */; };
 		9C69A55A1C2126EC007EE398 /* MeeWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A5581C2126EC007EE398 /* MeeWebController.m */; };
 		9C69A55B1C2126EC007EE398 /* MeeWebController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C69A5591C2126EC007EE398 /* MeeWebController.xib */; };
@@ -123,6 +124,8 @@
 		9BFA81E01BEAF7E500AA71B5 /* MeeBSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeeBSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFA81E41BEAF7E500AA71B5 /* MeeBSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeeBSUITests.m; sourceTree = "<group>"; };
 		9BFA81E61BEAF7E500AA71B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C00BA401C2303150058A850 /* MeeCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeCategoryViewController.h; sourceTree = "<group>"; };
+		9C00BA411C2303150058A850 /* MeeCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeCategoryViewController.m; sourceTree = "<group>"; };
 		9C69A5541C2104DF007EE398 /* MeeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeButton.h; sourceTree = "<group>"; };
 		9C69A5551C2104DF007EE398 /* MeeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeButton.m; sourceTree = "<group>"; };
 		9C69A5571C2126EC007EE398 /* MeeWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeWebController.h; sourceTree = "<group>"; };
@@ -252,6 +255,7 @@
 		9B47C2F81BED7F7B0060F6CD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9C00BA3F1C23029D0058A850 /* AddCategory */,
 				9B47C31C1BED83120060F6CD /* MeeFriendTrendsViewController.h */,
 				9B47C31D1BED83120060F6CD /* MeeFriendTrendsViewController.m */,
 				9BB666FA1BFC0A460082B620 /* MeeLoginRegisterController.h */,
@@ -550,6 +554,15 @@
 			path = MeeBSUITests;
 			sourceTree = "<group>";
 		};
+		9C00BA3F1C23029D0058A850 /* AddCategory */ = {
+			isa = PBXGroup;
+			children = (
+				9C00BA401C2303150058A850 /* MeeCategoryViewController.h */,
+				9C00BA411C2303150058A850 /* MeeCategoryViewController.m */,
+			);
+			name = AddCategory;
+			sourceTree = "<group>";
+		};
 		9C69A55F1C21570A007EE398 /* footView */ = {
 			isa = PBXGroup;
 			children = (
@@ -770,6 +783,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C69A55E1C2142D5007EE398 /* MeeSettingViewController.m in Sources */,
+				9C00BA421C2303150058A850 /* MeeCategoryViewController.m in Sources */,
 				9BB666FC1BFC0A460082B620 /* MeeLoginRegisterController.m in Sources */,
 				9C69A56C1C215AFE007EE398 /* MeeOtherCell.m in Sources */,
 				9BEBD10D1BF2C84E00FE8CFB /* MeeTabBar.m in Sources */,

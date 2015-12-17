@@ -56,15 +56,18 @@
     [self addChildViewController:nav2];
      */
     
-    [self setupOneChildVc:[[MeeMeViewController alloc]initWithStyle:UITableViewStyleGrouped] andTitle:@"我" andImage:@"tabBar_me_icon" andSelectImage:@"tabBar_me_click_icon"];
+    // 关注模块的控制器,重 StoryBorad中加载
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MeeFriendTrendsViewController" bundle:nil];
+    [self setupOneChildVc:[sb instantiateInitialViewController] andTitle:@"关注" andImage:@"tabBar_friendTrends_icon" andSelectImage:@"tabBar_friendTrends_click_icon"];
     
     [self setupOneChildVc:[[MeeEssenceViewController alloc]init] andTitle:@"精华" andImage:@"tabBar_essence_icon" andSelectImage:@"tabBar_essence_click_icon"];
     [self setupOneChildVc:[[MeeNewViewController alloc]init] andTitle:@"新帖" andImage:@"tabBar_new_icon" andSelectImage:@"tabBar_new_click_icon"];
     
-    // 关注模块的控制器,重 StoryBorad中加载
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MeeFriendTrendsViewController" bundle:nil];
-    [self setupOneChildVc:[sb instantiateInitialViewController] andTitle:@"关注" andImage:@"tabBar_friendTrends_icon" andSelectImage:@"tabBar_friendTrends_click_icon"];
+
+    
+    
 //    [self setupOneChildVc:[[MeeFriendTrendsViewController alloc]init] andTitle:@"关注" andImage:@"tabBar_friendTrends_icon" andSelectImage:@"tabBar_friendTrends_click_icon"];
+    [self setupOneChildVc:[[MeeMeViewController alloc]initWithStyle:UITableViewStyleGrouped] andTitle:@"我" andImage:@"tabBar_me_icon" andSelectImage:@"tabBar_me_click_icon"];
 
 }
 
