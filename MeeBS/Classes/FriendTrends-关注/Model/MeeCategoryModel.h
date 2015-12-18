@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+// #import "MeeUserModel.h"
+@class MeeUserModel;
+
 @interface MeeCategoryModel : NSObject
 
 // 属性
 @property (nonatomic, strong) NSString *categoryID; /**< id */
 @property (nonatomic, strong) NSString *name; /**< 标签的名称 */
+
+@property (nonatomic, strong) NSArray<MeeUserModel *> *users; /**< 存放用户数据模型的数组 */
 
 @end
