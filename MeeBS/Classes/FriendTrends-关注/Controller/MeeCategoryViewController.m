@@ -123,26 +123,39 @@ static NSString *const userCell = @"userCell";
 // 加载用户的数据
 - (void)loadUserData
 {
-    
     // 获取选择标签cell 的标签模型
-    MeeCategoryModel *catagoryModel = self.categories[self.categoryTableVeiw.indexPathForSelectedRow.row];
+    MeeCategoryModel *categoryModel = self.categories[self.categoryTableVeiw.indexPathForSelectedRow.row];
     //参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
-    params[@"category_id"] = catagoryModel.categoryID;
+    params[@"category_id"] = categoryModel.categoryID;
     // __weak typeof(self) weakSelf = self;
     MeeWeakSelf;
     [weakSelf.manger GET:MeeBaseUrl parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         
+        // 成功访问服务器,就将页数page设置为 1
+        categoryModel.page = 1;
+        
        // [responseObject writeToFile:@"/Users/Lee/Desktop/user.plist" atomically:YES];
        // 数据转模型，并与对应的标签的模型进行绑定
-        catagoryModel.users = [MeeUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        categoryModel.users = [MeeUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+       // 字典中获取的数据一定要进行数据转换，字典中一般存放的是 OC对象
+        categoryModel.total = [responseObject[@"total"] integerValue];
        // 一定要刷新表格
         [weakSelf.userTableView reloadData];
         
         // 结束下拉刷新
         [weakSelf.userTableView.mj_header endRefreshing];
+        
+        // 当获取到全部数据，判断一下是否要隐藏底部的刷新
+        if (categoryModel.users.count == categoryModel.total) {
+            // 隐藏
+            // self.userTableView.mj_footer.hidden = YES;
+            // 提醒 没有更多数据
+            [weakSelf.userTableView.mj_footer endRefreshingWithNoMoreData];
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         // 结束下拉刷新
         [weakSelf.userTableView.mj_header endRefreshing];
@@ -150,6 +163,12 @@ static NSString *const userCell = @"userCell";
 
 }
 
+// 刷新加载更多的第二方式: 直接获取服务器返回的下一页的页数next_page,total_page页数
+// categoryModel.nextPage = [responseObject[@"next_page"] integerValue];
+// 最后可以更具 next_page == total_page 隐藏加载更多
+
+// 刷新加载更多的第一种方式：
+// 自定义 page属性，根据page + 1 加载下一页，数组中累计到获取的数量 == 服务器返回的就 隐藏加载更多
 
 // 加载更多的用户数据
 - (void)loadMoreUserData
@@ -172,13 +191,20 @@ static NSString *const userCell = @"userCell";
         [categoryModel.users addObjectsFromArray:[MeeUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
         [weakSelf.userTableView reloadData];
         
+        // 结束加载（如果不结束加载，下次就无法上拉加载）
+        [weakSelf.userTableView.mj_footer endRefreshing];
         
-        
-        
+        // 当获取到全部数据，判断一下是否要隐藏底部的刷新（当没有更多数据的时候，要么隐藏 footer，要么提醒 没有更数据 ）
+        if (categoryModel.users.count == categoryModel.total) {
+            // 隐藏
+            // self.userTableView.mj_footer.hidden = YES;
+            // 提醒 没有更多数据
+            [weakSelf.userTableView.mj_footer endRefreshingWithNoMoreData];
+        }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        // 结束下拉刷新
-        [weakSelf.userTableView.mj_header endRefreshing];
+        // 结束加载
+        [weakSelf.userTableView.mj_footer endRefreshing];
     }];
 }
 

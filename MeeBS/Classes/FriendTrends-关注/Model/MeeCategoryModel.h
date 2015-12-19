@@ -21,7 +21,7 @@
 @property (nonatomic, strong) NSMutableArray<MeeUserModel *> *users; /**< 存放用户数据模型的数组 */
 
 @property (nonatomic, assign) NSInteger page; /**< 页数 */
-
+@property (nonatomic, assign) NSInteger total; /**< 用户的总数 */
 
 
 
