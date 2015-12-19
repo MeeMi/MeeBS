@@ -23,4 +23,6 @@ UIKIT_EXTERN NSString * const MeeBaseUrl;
 
 UIKIT_EXTERN NSInteger const MeeMargin;
 
+UIKIT_EXTERN NSInteger const MeeNavHeight;
+
 @end

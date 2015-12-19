@@ -12,6 +12,9 @@
 #import "MeeCategoryModel.h"
 #import "MeeUserModel.h"
 
+#import "MeeCategoryCell.h"
+#import "MeeUserCell.h"
+
 #import <MJExtension.h>
 #import <SVProgressHUD.h>
 
@@ -37,7 +40,8 @@ static NSString *const userCell = @"userCell";
     self.title = @"推荐标签";
     self.view.backgroundColor = MeeRandomColor;
     
-    
+    // 设置tableView
+    [self setupTableView];
     // 加载标签分类的数据
     [self loadCateData];
 }
@@ -49,6 +53,16 @@ static NSString *const userCell = @"userCell";
         _manger = [MeeHTTPSessionManager shareManger];
     }
     return _manger;
+}
+
+- (void)setupTableView
+{
+    self.userTableView.rowHeight = 70;
+    self.userTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    UIEdgeInsets insets = UIEdgeInsetsMake(MeeNavHeight, 0, 0, 0);
+    self.userTableView.contentInset = insets;
+    self.userTableView.scrollIndicatorInsets = insets;
+    self.categoryTableVeiw.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 #pragma mark - 加载数据
@@ -98,6 +112,7 @@ static NSString *const userCell = @"userCell";
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
+
 }
 
 
@@ -108,22 +123,20 @@ static NSString *const userCell = @"userCell";
     if (tableView == self.categoryTableVeiw) {
         return self.categories.count;
     }
-    
     // 获取
     MeeCategoryModel *categoryModel = self.categories[self.categoryTableVeiw.indexPathForSelectedRow.row];
     return categoryModel.users.count;
-    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == self.categoryTableVeiw) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:categoryCell];
-        cell.textLabel.text = self.categories[indexPath.row].name;
+        MeeCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:categoryCell];
+        cell.categoryModel = self.categories[indexPath.row];
         return cell;
     }else{
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:userCell];
-        cell.textLabel.text = self.categories[self.categoryTableVeiw.indexPathForSelectedRow.row].users[indexPath.row].screen_name;
+        MeeUserCell *cell = [tableView dequeueReusableCellWithIdentifier:userCell];
+        cell.userModel = self.categories[self.categoryTableVeiw.indexPathForSelectedRow.row].users[indexPath.row];
         return cell;
     }
 
@@ -135,19 +148,5 @@ static NSString *const userCell = @"userCell";
     // 当点击了加载 用户的数据
     [self loadUserData];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @end

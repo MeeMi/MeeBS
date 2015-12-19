@@ -13,3 +13,6 @@ NSString * const MeeBaseUrl = @"http://api.budejie.com/api/api_open.php";
 
 // 设置统一的间距
 NSInteger const MeeMargin = 10;
+
+// 设置导航条的高度
+NSInteger const MeeNavHeight = 64;

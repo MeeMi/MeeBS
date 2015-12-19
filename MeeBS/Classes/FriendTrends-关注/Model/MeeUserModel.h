@@ -10,7 +10,8 @@
 
 @interface MeeUserModel : NSObject
 
-@property (nonatomic, copy) NSString *fans_count; /**< 粉丝数 */
+// 服务 fans_count是NSString 类型，但是实际应用需要 NSInteger，所以在模型中直接用NSInteger类型，MJExtension会自动转换的
+@property (nonatomic, assign) NSInteger fans_count; /**< 粉丝数 */
 @property (nonatomic, copy) NSString *header; /**< 头像的链接 */
 @property (nonatomic, copy) NSString *screen_name; /**<名称 */
 
