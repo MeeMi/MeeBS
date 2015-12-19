@@ -53,6 +53,7 @@
 		9C90B8F41C1D11200099F410 /* MeeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8F31C1D11200099F410 /* MeeTextField.m */; };
 		9C90B8F71C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8F61C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m */; };
 		9C90B8FE1C1DA23F0099F410 /* MeeMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8FD1C1DA23F0099F410 /* MeeMeCell.m */; };
+		9CE0A3971C25746300011309 /* MeeRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0A3961C25746300011309 /* MeeRefreshHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

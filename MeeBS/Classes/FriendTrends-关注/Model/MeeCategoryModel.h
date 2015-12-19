@@ -17,6 +17,12 @@
 @property (nonatomic, strong) NSString *categoryID; /**< id */
 @property (nonatomic, strong) NSString *name; /**< 标签的名称 */
 
-@property (nonatomic, strong) NSArray<MeeUserModel *> *users; /**< 存放用户数据模型的数组 */
+// user会获取更多的，所以用可变数据
+@property (nonatomic, strong) NSMutableArray<MeeUserModel *> *users; /**< 存放用户数据模型的数组 */
+
+@property (nonatomic, assign) NSInteger page; /**< 页数 */
+
+
+
 
 @end

@@ -18,14 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 设置UITextField的占位文字颜色和大小
-    [self setupTextFieldPlaceholder];
 }
 
-- (void)setupTextFieldPlaceholder
-{
-    
-}
 
 //  处理注册按钮
 - (IBAction)regiserButton:(UIButton *)button {

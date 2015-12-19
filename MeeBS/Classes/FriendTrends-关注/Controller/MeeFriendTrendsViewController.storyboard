@@ -141,7 +141,7 @@
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aIs-gQ-gxP" userLabel="用户表格">
                                 <rect key="frame" x="70" y="0.0" width="530" height="600"/>
-                                <color key="backgroundColor" red="1" green="0.62062990350000002" blue="0.25215634139999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="70" id="eMy-NS-mRn" customClass="MeeUserCell">
                                         <rect key="frame" x="0.0" y="28" width="530" height="70"/>

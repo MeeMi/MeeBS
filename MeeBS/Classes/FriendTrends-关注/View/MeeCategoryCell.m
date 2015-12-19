@@ -22,11 +22,21 @@
    
 }
 
+// 其实 tablView中提供了 cell选中和取消的代理方法
+// 但是 更加单一原则,cell的选中状态修改配置,应该在cell内部中完成
+// 所以比建议将cell选中,修改cell的配置在 控制器中的代理方法
+
 // 系统提供的方法,只要cell的选中状态改变,可以可以再这个里面进行相关View的设置
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    NSLog(@"--是否-->%d",selected);
+    if(selected){
+        self.nameLabel.textColor = [UIColor redColor];
+        self.redViewIndicator.hidden = NO;
+    }else{
+        self.nameLabel.textColor = [UIColor blackColor];
+        self.redViewIndicator.hidden = YES;
+    }
+ 
 }
 
 - (void)setCategoryModel:(MeeCategoryModel *)categoryModel
