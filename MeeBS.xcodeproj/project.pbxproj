@@ -54,6 +54,7 @@
 		9C90B8F71C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8F61C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m */; };
 		9C90B8FE1C1DA23F0099F410 /* MeeMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8FD1C1DA23F0099F410 /* MeeMeCell.m */; };
 		9CE0A3971C25746300011309 /* MeeRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0A3961C25746300011309 /* MeeRefreshHeader.m */; };
+		9CE0A39A1C2594D300011309 /* MeeRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0A3991C2594D300011309 /* MeeRefreshFooter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +165,10 @@
 		9C90B8F61C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MeeExtensionPlaceholderColor.m"; sourceTree = "<group>"; };
 		9C90B8FC1C1DA23F0099F410 /* MeeMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeMeCell.h; sourceTree = "<group>"; };
 		9C90B8FD1C1DA23F0099F410 /* MeeMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeMeCell.m; sourceTree = "<group>"; };
+		9CE0A3951C25746300011309 /* MeeRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeRefreshHeader.h; sourceTree = "<group>"; };
+		9CE0A3961C25746300011309 /* MeeRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeRefreshHeader.m; sourceTree = "<group>"; };
+		9CE0A3981C2594D300011309 /* MeeRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeRefreshFooter.h; sourceTree = "<group>"; };
+		9CE0A3991C2594D300011309 /* MeeRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeRefreshFooter.m; sourceTree = "<group>"; };
 		D38C993FA7D182A9E412698B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -418,6 +423,7 @@
 		9B47C3071BED7F7B0060F6CD /* Other-其他 */ = {
 			isa = PBXGroup;
 			children = (
+				9CE0A3941C25739000011309 /* RefreshOrDown */,
 				9BFA44341BEDAD66007DD99E /* main.m */,
 				9BFA44351BEDAD66007DD99E /* PrefixHeader.pch */,
 				9B47C3081BED7F7B0060F6CD /* AppDelegate.h */,
@@ -616,6 +622,17 @@
 				9C69A56B1C215AFE007EE398 /* MeeOtherCell.xib */,
 			);
 			name = setting;
+			sourceTree = "<group>";
+		};
+		9CE0A3941C25739000011309 /* RefreshOrDown */ = {
+			isa = PBXGroup;
+			children = (
+				9CE0A3951C25746300011309 /* MeeRefreshHeader.h */,
+				9CE0A3961C25746300011309 /* MeeRefreshHeader.m */,
+				9CE0A3981C2594D300011309 /* MeeRefreshFooter.h */,
+				9CE0A3991C2594D300011309 /* MeeRefreshFooter.m */,
+			);
+			name = RefreshOrDown;
 			sourceTree = "<group>";
 		};
 		E7EAA70FD1DE76B47D26DB1C /* Frameworks */ = {
@@ -824,6 +841,7 @@
 				9BF01C6B1BF7326D0004E78D /* MeeTagModel.m in Sources */,
 				9B47C3151BED80E80060F6CD /* MeeTabBarController.m in Sources */,
 				9B47C3241BED83450060F6CD /* MeeNewViewController.m in Sources */,
+				9CE0A39A1C2594D300011309 /* MeeRefreshFooter.m in Sources */,
 				9C69A5561C2104DF007EE398 /* MeeButton.m in Sources */,
 				9C90B8F41C1D11200099F410 /* MeeTextField.m in Sources */,
 				9BE8BDB21BF81F9C00B75E7B /* UIImage+MeeCircleImage.m in Sources */,
@@ -831,6 +849,7 @@
 				9BB667401BFC28C50082B620 /* MeeLoginButton.m in Sources */,
 				9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */,
 				9C83847F1C1EC0860043641A /* MeeFooterView.m in Sources */,
+				9CE0A3971C25746300011309 /* MeeRefreshHeader.m in Sources */,
 				9C8384821C1EC4D10043641A /* MeeSquareModel.m in Sources */,
 				9BF01C6F1BF737E60004E78D /* MeeTagTableViewCell.m in Sources */,
 				9C579E581C251A710010420F /* MeeUserCell.m in Sources */,
