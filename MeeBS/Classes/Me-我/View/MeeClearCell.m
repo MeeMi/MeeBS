@@ -31,7 +31,7 @@
         // 要计算缓存文件大小，是一个耗时的过程，所以开一个异步的子线程
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             // NSLog(@"线程--->%@",[NSThread currentThread]);
-             [NSThread sleepForTimeInterval:5];
+             [NSThread sleepForTimeInterval:2];
             // 调用计算缓存的文件的方法
             unsigned long long fileSize = [self getFileSize];
              // 单位换算 GB / M / KB / B

@@ -235,11 +235,47 @@ static NSString *const userCell = @"userCell";
 
 }
 
+/**
+ *  存在一个问题,当加载第一用户的数据后,再去加载第二用户的数据时,第一个用户的数据模型已经被销毁,每次重新访问的时候,都需要向服务器,重新发送请求,这样比较消耗性能,也很浪费流量.
+ *  解决这样问题:就是将每次加载的 用户数据和对应的 类别标签存取来
+ *  方式: 将 用户的数据作为 分类标签中的一部分,直接在分类标签中声明一个 用户数据模型 属性,将 标签 和对应的用户数据绑定在一起,形成一一对应(类似于 [我]模块中的footView中的Button,给自定义Button绑定一个对应的 square 模型)
+ *
+ *  这里选择这种方式: 更加的面向对象
+ */
+
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 当点击了加载 用户的数据
-    [self loadUserData];
+    // 因为有两个tableView，需要判断是哪个tableView中的cell选中
+    if(tableView == self.categoryTableVeiw){
+        // 首先判读,其对应的 数据模型中有没有值,如果有值就直接刷新用户表格,没有值,就开启自动刷新,向服务器请求数据
+        
+        // 判读字符串 和 数组是否为空不要直接 " == nil "
+        MeeCategoryModel *categoryModel = self.categories[self.categoryTableVeiw.indexPathForSelectedRow.row];
+        if (categoryModel.users.count == 0) {
+            // 没有值，向服务器请求
+            [self.userTableView.mj_header beginRefreshing];
+            
+            // 还需要解决一个问题 : 网络很慢的时候,点左边的标签区加载右面没有被加载的过的页面,加正在加载的过程中,右面的界面不应该显示已经加载过的界面数据,应该显示为空 . 所以在向服务请请求数据,要清空表格, 就直接刷新一下表格 [self.userTableView reloadData];
+            
+           // [self.userTableView reloadData];
+        }
+        // 有值，直接刷新表格
+        [self.userTableView reloadData];
+        // 刷新表格,会自动调用 dataSource中 numberOfRowsInSection 和 cellForRowAtIndexPath
+        // numberOfRowsInSection 在这个方法中,通过选中的 分类标签cell获取 用户数据模型的数组,返回 表格的行数
+        // cellForRowAtIndexPath 加载 分类标签cell获取 用户数据模型的数组,设置userTabelView的对应的每行内容
+        
+        
+        // 存在一个问题，当更换了 userTableview中的数据的时候，footer不应该还是上个一样，需要根据自己的数据白判断
+        if(categoryModel.total == categoryModel.users.count){
+            self.userTableView.mj_footer.hidden = YES;
+        }
+    }else{
+        NSLog(@"userTableView----> %zd",indexPath.row);
+    }
+    
+
 }
 
 @end
