@@ -20,6 +20,8 @@
 @property (nonatomic, weak) UIScrollView *scrollView;
 @property (nonatomic, weak) UIButton *selectBtn; /**< 记录选中的按钮 */
 @property (nonatomic, weak) UIView *indicatorView; /**< 记录一下指示器 */
+@property (nonatomic, strong) NSMutableArray *buttons; /**< 存放按钮 */
+
 
 @end
 
@@ -52,6 +54,7 @@
     // 精华模块，分为 全部、声音、图片、视频、段子，这个五个部分
     // 这个五个部分展示五个不同的内容View，创建五个子控制器，负责每个View界面上的数据展示
     // 给精华模块，添加子控制器
+    // 添加子控制器（因为创建titleButton要用到添加子控制器的个数，所以添加控制器放在前面）
     [self setupAddChildViewController];
     
     // 设置scrollView
@@ -59,6 +62,9 @@
     
     // 设置导航条下面的切换导航按钮条
     [self setupButtonView];
+    
+    // 设置比如【精华】添加提议控制的View
+    [self addChildVcView];
 }
 
 #pragma mark - 导航条左边的按钮点击事件
@@ -103,13 +109,15 @@
     UIScrollView *scrollView = [[UIScrollView alloc]init];
     scrollView.frame = self.view.bounds;
     scrollView.delegate = self;
-   
+    scrollView.pagingEnabled = YES;
+    scrollView.scrollEnabled = YES;
     // 设置禁止设置scrollView增加内边距
     self.automaticallyAdjustsScrollViewInsets = NO;
     // 设置scrollView 的内容尺寸
-    self.scrollView.contentSize = CGSizeMake(self.childViewControllers.count * MeeScreenW, 0); // 0 表示竖直方向不要拖到
+    scrollView.contentSize = CGSizeMake(self.childViewControllers.count * MeeScreenW, 0); // 0 表示竖直方向不要拖到
     [self.view addSubview:scrollView];
     self.scrollView = scrollView;
+  
     
     
     // 这种方式添加控制器的弊端，一次性将所以的子控制都加载进来，但是实际中，是拖动到那个控制器，就去加载哪个控制器
@@ -125,6 +133,15 @@
      [scrollView addSubview:vc.view];
      }
      */
+}
+
+#pragma mark - 懒加载
+- (NSMutableArray *)buttons
+{
+    if (_buttons == nil) {
+        _buttons = [NSMutableArray array];
+    }
+    return _buttons;
 }
 
 #pragma mark - setupButtonView
@@ -144,6 +161,7 @@
     
     for (int i = 0; i < count; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.buttons addObject:btn];
         btn.x = i * btnW;
         btn.y = 0;
         btn.width = btnW;
@@ -181,6 +199,35 @@
 // 切换控制器的View
 - (void)changeVc:(UIButton *)btn
 {
+//    // 取消上一次按钮的选中
+//    self.selectBtn.selected = NO;
+//    // 设置本次按钮选中状态
+//    btn.selected = YES;
+//    // 记录本次选中的按钮
+//    self.selectBtn = btn;
+//    
+//    // 指示器的动画
+//    [UIView animateWithDuration:.25 animations:^{
+//        // 让指示的宽度和选中的按钮文子是一样大的
+//        self.indicatorView.width = btn.titleLabel.width;
+//        self.indicatorView.centerX = btn.centerX;
+//    }];
+    [self showSelect:btn];
+    
+    // 当点击按钮时，切换对应控制的View
+    // 获取对应按钮的索引， 方法一，创建按钮的时候，设置按钮的tag 方法二：创建一个数值存放按钮
+    NSInteger index = [self.buttons indexOfObject:btn];
+    CGPoint offset = self.scrollView.contentOffset;
+    // 只修改x
+    offset.x = index * MeeScreenW;
+    [self.scrollView setContentOffset:offset];
+   
+}
+
+
+#pragma mark - 显示对应的按钮
+- (void)showSelect:(UIButton *)btn
+{
     // 取消上一次按钮的选中
     self.selectBtn.selected = NO;
     // 设置本次按钮选中状态
@@ -194,8 +241,6 @@
         self.indicatorView.width = btn.titleLabel.width;
         self.indicatorView.centerX = btn.centerX;
     }];
-    
-   
 }
 
 
@@ -203,28 +248,42 @@
 
 // scrollView 滚动过程中调用
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
-    
+    // 通过代码来滚动scrollView，会调用这个方法
+    // 切换scrollView中测View
+    [self addChildVcView];
 }
 // scrollView 完全停止时，调用
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     //DidEndDecelerating 在减速过程后，就是停止
     
+    
+    NSInteger index = scrollView.contentOffset.x / MeeScreenW;
+    // 按钮要显示到对应的按钮
+    [self showSelect:self.buttons[index]];
+    // scrollView 滚动时，切换控制器的View
+    [self addChildVcView];
 }
 
 
 #pragma mark - 往scrollView中添加子控制器的View
+// 这样，只要将用到的View时，才去添加控制器
 - (void)addChildVcView
 {
+    NSLog(@"sss - %s - %zd",__func__,__LINE__);
     // 获取索引
     NSInteger index = self.scrollView.contentOffset.x / MeeScreenW;
     
     // 获取对应控制器的view，设置尺寸
-    UIViewController *showView = self.childViewControllers[index].view;
+    UIViewController *showVc = self.childViewControllers[index];
     
-    [self.scrollView addSubview:showView];
+    // 判断一下，子控制的view是否已经添加，如果已经添加，就不要去重复添加
+    if (showVc.isViewLoaded) return;
+    
+    [self.scrollView addSubview:showVc.view];
     // 设置尺寸
-    
+    showVc.view.frame = self.scrollView.bounds;
+    // showVc.view.frame = CGRectMake(self.scrollView.contentOffset.x, 0,  self.scrollView.width, self.scrollView.height);
+
 }
 
 
