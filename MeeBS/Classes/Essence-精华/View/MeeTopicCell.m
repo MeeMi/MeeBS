@@ -43,8 +43,8 @@
 {
     _topicModel = topicModel;
     
-    // 设置头像
-    [self.hreadImageView sd_setImageWithURL:[NSURL URLWithString:self.topicModel.profile_image]];
+    // 设置头像(圆角头像)
+    [self.hreadImageView setHeaderImage:self.topicModel.profile_image];
     
     // 设置昵称
     self.nameLabel.text = self.topicModel.name;
@@ -54,7 +54,7 @@
     
     // 设置文本内容
     self.contentLabel.text = self.topicModel.text;
-    
+     
 }
 
 // 重写setFrame

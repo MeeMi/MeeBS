@@ -36,4 +36,26 @@
 @property (nonatomic, assign) CGFloat cellHeight; /**< cell的高度 */
 
 
+// 创建帖子类型的枚举
+typedef enum{
+    /**< 全部 */
+    MeeTopicAll = 1,
+    /**< 图片帖子 */
+    MeeTopicTypePicture = 10,
+    /**< 声音帖子 */
+    MeeTopicTypeVoice = 31,
+    /**< 文字帖子 */
+    MeeTopicTypeWord = 29,
+    /**< 视频帖子 */
+    MeeTopicTypeVideo = 41
+}MeeTopicType;
+
+// 帖子类型的参数
+@property (nonatomic, assign) MeeTopicType type;
+
+
+
+
+
+
 @end
