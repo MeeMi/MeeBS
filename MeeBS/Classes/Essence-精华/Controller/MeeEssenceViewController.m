@@ -149,7 +149,7 @@
 {
     // 1.创建view
     UIView *titleView = [[UIView alloc]init];
-    titleView.frame = CGRectMake(0, MeeNavHeight, MeeScreenW, 40);
+    titleView.frame = CGRectMake(0, MeeNavHeight, MeeScreenW, 35);
     titleView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.5];
     [self.view addSubview:titleView];
     
@@ -269,7 +269,7 @@
 // 这样，只要将用到的View时，才去添加控制器
 - (void)addChildVcView
 {
-    NSLog(@"sss - %s - %zd",__func__,__LINE__);
+//    NSLog(@"sss - %s - %zd",__func__,__LINE__);
     // 获取索引
     NSInteger index = self.scrollView.contentOffset.x / MeeScreenW;
     

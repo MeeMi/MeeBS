@@ -58,6 +58,9 @@
 		9C90B8F41C1D11200099F410 /* MeeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8F31C1D11200099F410 /* MeeTextField.m */; };
 		9C90B8F71C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8F61C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m */; };
 		9C90B8FE1C1DA23F0099F410 /* MeeMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8FD1C1DA23F0099F410 /* MeeMeCell.m */; };
+		9CBF42751C7DB18E00CAD6E5 /* MeeTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF42741C7DB18E00CAD6E5 /* MeeTopicModel.m */; };
+		9CBF427B1C7DB4BE00CAD6E5 /* MeeTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF42791C7DB4BE00CAD6E5 /* MeeTopicCell.m */; };
+		9CBF427C1C7DB4BE00CAD6E5 /* MeeTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBF427A1C7DB4BE00CAD6E5 /* MeeTopicCell.xib */; };
 		9CE0A3971C25746300011309 /* MeeRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0A3961C25746300011309 /* MeeRefreshHeader.m */; };
 		9CE0A39A1C2594D300011309 /* MeeRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0A3991C2594D300011309 /* MeeRefreshFooter.m */; };
 /* End PBXBuildFile section */
@@ -180,6 +183,11 @@
 		9C90B8F61C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MeeExtensionPlaceholderColor.m"; sourceTree = "<group>"; };
 		9C90B8FC1C1DA23F0099F410 /* MeeMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeMeCell.h; sourceTree = "<group>"; };
 		9C90B8FD1C1DA23F0099F410 /* MeeMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeMeCell.m; sourceTree = "<group>"; };
+		9CBF42731C7DB18E00CAD6E5 /* MeeTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeTopicModel.h; sourceTree = "<group>"; };
+		9CBF42741C7DB18E00CAD6E5 /* MeeTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeTopicModel.m; sourceTree = "<group>"; };
+		9CBF42781C7DB4BE00CAD6E5 /* MeeTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeTopicCell.h; sourceTree = "<group>"; };
+		9CBF42791C7DB4BE00CAD6E5 /* MeeTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeTopicCell.m; sourceTree = "<group>"; };
+		9CBF427A1C7DB4BE00CAD6E5 /* MeeTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeeTopicCell.xib; sourceTree = "<group>"; };
 		9CE0A3951C25746300011309 /* MeeRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeRefreshHeader.h; sourceTree = "<group>"; };
 		9CE0A3961C25746300011309 /* MeeRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeRefreshHeader.m; sourceTree = "<group>"; };
 		9CE0A3981C2594D300011309 /* MeeRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeRefreshFooter.h; sourceTree = "<group>"; };
@@ -259,6 +267,7 @@
 		9B47C2F51BED7F7B0060F6CD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9CBF42761C7DB24900CAD6E5 /* Topic */,
 				9BF01C691BF7326D0004E78D /* MeeTagModel.h */,
 				9BF01C6A1BF7326D0004E78D /* MeeTagModel.m */,
 			);
@@ -268,6 +277,7 @@
 		9B47C2F61BED7F7B0060F6CD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9CBF42771C7DB48600CAD6E5 /* topic */,
 				9BF01C6C1BF737E60004E78D /* MeeTagTableViewCell.h */,
 				9BF01C6D1BF737E60004E78D /* MeeTagTableViewCell.m */,
 				9BF01C6E1BF737E60004E78D /* MeeTagTableViewCell.xib */,
@@ -665,6 +675,25 @@
 			name = setting;
 			sourceTree = "<group>";
 		};
+		9CBF42761C7DB24900CAD6E5 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				9CBF42731C7DB18E00CAD6E5 /* MeeTopicModel.h */,
+				9CBF42741C7DB18E00CAD6E5 /* MeeTopicModel.m */,
+			);
+			name = Topic;
+			sourceTree = "<group>";
+		};
+		9CBF42771C7DB48600CAD6E5 /* topic */ = {
+			isa = PBXGroup;
+			children = (
+				9CBF42781C7DB4BE00CAD6E5 /* MeeTopicCell.h */,
+				9CBF42791C7DB4BE00CAD6E5 /* MeeTopicCell.m */,
+				9CBF427A1C7DB4BE00CAD6E5 /* MeeTopicCell.xib */,
+			);
+			name = topic;
+			sourceTree = "<group>";
+		};
 		9CE0A3941C25739000011309 /* RefreshOrDown */ = {
 			isa = PBXGroup;
 			children = (
@@ -796,6 +825,7 @@
 				9C69A56D1C215AFE007EE398 /* MeeOtherCell.xib in Resources */,
 				9BF01C701BF737E60004E78D /* MeeTagTableViewCell.xib in Resources */,
 				9C69A55B1C2126EC007EE398 /* MeeWebController.xib in Resources */,
+				9CBF427C1C7DB4BE00CAD6E5 /* MeeTopicCell.xib in Resources */,
 				9BFA81CC1BEAF7E500AA71B5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -876,6 +906,7 @@
 				9BEBD10D1BF2C84E00FE8CFB /* MeeTabBar.m in Sources */,
 				9C579E551C251A5D0010420F /* MeeCategoryCell.m in Sources */,
 				9C4A84821C2460880054D56B /* MeeUserModel.m in Sources */,
+				9CBF427B1C7DB4BE00CAD6E5 /* MeeTopicCell.m in Sources */,
 				9C69A55A1C2126EC007EE398 /* MeeWebController.m in Sources */,
 				9C0BAEA51C40EF2500747C7B /* MeeAllViewController.m in Sources */,
 				9C69A5671C215772007EE398 /* MeeSettingCell.m in Sources */,
@@ -894,6 +925,7 @@
 				9BB667401BFC28C50082B620 /* MeeLoginButton.m in Sources */,
 				9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */,
 				9C83847F1C1EC0860043641A /* MeeFooterView.m in Sources */,
+				9CBF42751C7DB18E00CAD6E5 /* MeeTopicModel.m in Sources */,
 				9CE0A3971C25746300011309 /* MeeRefreshHeader.m in Sources */,
 				9C8384821C1EC4D10043641A /* MeeSquareModel.m in Sources */,
 				9BF01C6F1BF737E60004E78D /* MeeTagTableViewCell.m in Sources */,
