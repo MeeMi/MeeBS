@@ -34,8 +34,8 @@
 - (NSString *)created_at
 {
 //     _created_at = @"2014-08-06 19:47:57";
-     _created_at = @"2016-02-29 22:43:00";
-    
+    _created_at = @"2016-02-29 22:43:00";
+ 
     // 1.created_at 是服务器返回字符串时间，需要转换成NSDate
     // 创建一个日期格式
     NSDateFormatter *fmt = [[NSDateFormatter alloc]init];
@@ -64,12 +64,12 @@
             NSDateComponents *comp = [calendar components:unit fromDate:creatAtDate toDate:currentDate options:0 ];
             if (comp.hour >= 1) {
                 return [NSString stringWithFormat:@"%zd小时前",comp.hour];
-            }else if(comp.second < 60){
+             }else if(comps.minute >= 1){
+                return [NSString stringWithFormat:@"%zd分钟前",comps.minute];
+             }else{
                 return @"刚刚";
-            }else{
-                return [NSString stringWithFormat:@"%zd分钟前",comp.minute];
-            }
-            
+             }
+ 
         }else if([calendar isDateInYesterday:creatAtDate]){ // 昨天
             fmt.dateFormat = @"HH:mm:ss";
             return [NSString stringWithFormat:@"昨天 %@",[fmt stringFromDate:creatAtDate]];
@@ -91,6 +91,52 @@
 /** 写一个时间的分类，判断日期是今年、今天、明天、昨天*/
 - (NSString *)created_at
 {
+    _created_at = @"2016-03-01 17:38:50";
+    
+    
+    // 将服务器上的发表的时间 由 字符串 转化成 NSDate
+    NSDateFormatter *fmt = [[NSDateFormatter alloc]init];
+    fmt.dateFormat = @"YYYY-MM-dd HH:mm:ss";
+    NSDate *creatAtDate = [fmt dateFromString:_created_at];
+    
+    if([creatAtDate isThisYear] == YES){ // 今年
+        if ([creatAtDate isToday]) {
+            // 今天
+            NSCalendar *calendar = [NSCalendar currentCalendar];
+            NSCalendarUnit unit = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+            NSDateComponents *comps = [calendar components:unit fromDate:creatAtDate toDate:[NSDate date] options:0];
+            
+            if(comps.hour >= 1){
+                // 几小时前
+                return [NSString stringWithFormat:@"%zd小时前",comps.hour];
+            }else if(comps.minute >= 1){
+                return [NSString stringWithFormat:@"%zd分钟前",comps.minute];
+                
+            }else{
+                return @"刚刚";
+            }
+            
+        }else if([creatAtDate isYesterday]){
+            // 昨天
+            // 昨天 17:56:34
+            // fmt.dateFormat = @"HH:mm:ss";
+            // return [NSString stringWithFormat:@"昨天 %@",[fmt dateFromString:_created_at]];
+            
+            fmt.dateFormat = @"昨天 HH:mm:ss";
+            return [fmt stringFromDate:creatAtDate];
+            
+        }else{
+            // 其他
+            // 07-06 19:47:57
+            fmt.dateFormat = @"MM-dd HH:mm:ss";
+            return [fmt stringFromDate:creatAtDate];
+        }
+    }else{
+        // 非今年
+        return _created_at;
+    }
+    
+    
     return nil;
 }
 

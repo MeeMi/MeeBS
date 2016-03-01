@@ -36,5 +36,6 @@
 #import "UIBarButtonItem+MeeBarButtonItem.h"
 #import "UIImage+MeeCircleImage.h"
 #import "UIImageView+MeeHeaderImage.h"
+#import "NSDate+MeeIsThisDate.h"
 
 #endif
