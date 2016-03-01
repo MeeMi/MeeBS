@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (MeeIsThisDate)
+@interface NSDate (MeeIsThisDate)
 
 /** 判断是不是今年 */
 - (BOOL)isThisYear;

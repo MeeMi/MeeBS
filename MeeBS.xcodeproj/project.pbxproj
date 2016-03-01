@@ -42,7 +42,7 @@
 		9C0BAEB11C40EF9100747C7B /* MeeWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BAEB01C40EF9100747C7B /* MeeWordViewController.m */; };
 		9C4A847F1C244CE70054D56B /* MeeCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4A847E1C244CE70054D56B /* MeeCategoryModel.m */; };
 		9C4A84821C2460880054D56B /* MeeUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4A84811C2460880054D56B /* MeeUserModel.m */; };
-		9C5788E71C85667E002739EE /* NSObject+MeeIsThisDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5788E61C85667E002739EE /* NSObject+MeeIsThisDate.m */; };
+		9C5788E71C85667E002739EE /* NSDate+MeeIsThisDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5788E61C85667E002739EE /* NSDate+MeeIsThisDate.m */; };
 		9C579E551C251A5D0010420F /* MeeCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C579E541C251A5D0010420F /* MeeCategoryCell.m */; };
 		9C579E581C251A710010420F /* MeeUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C579E571C251A710010420F /* MeeUserCell.m */; };
 		9C69A5561C2104DF007EE398 /* MeeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A5551C2104DF007EE398 /* MeeButton.m */; };
@@ -155,8 +155,8 @@
 		9C4A847E1C244CE70054D56B /* MeeCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeCategoryModel.m; sourceTree = "<group>"; };
 		9C4A84801C2460880054D56B /* MeeUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeUserModel.h; sourceTree = "<group>"; };
 		9C4A84811C2460880054D56B /* MeeUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeUserModel.m; sourceTree = "<group>"; };
-		9C5788E51C85667E002739EE /* NSObject+MeeIsThisDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MeeIsThisDate.h"; sourceTree = "<group>"; };
-		9C5788E61C85667E002739EE /* NSObject+MeeIsThisDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MeeIsThisDate.m"; sourceTree = "<group>"; };
+		9C5788E51C85667E002739EE /* NSDate+MeeIsThisDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MeeIsThisDate.h"; sourceTree = "<group>"; };
+		9C5788E61C85667E002739EE /* NSDate+MeeIsThisDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MeeIsThisDate.m"; sourceTree = "<group>"; };
 		9C579E531C251A5D0010420F /* MeeCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeCategoryCell.h; sourceTree = "<group>"; };
 		9C579E541C251A5D0010420F /* MeeCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeCategoryCell.m; sourceTree = "<group>"; };
 		9C579E561C251A710010420F /* MeeUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeUserCell.h; sourceTree = "<group>"; };
@@ -544,8 +544,8 @@
 				9BE8BDB41BF8241000B75E7B /* UIImageView+MeeHeaderImage.m */,
 				9C90B8F51C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.h */,
 				9C90B8F61C1D23FA0099F410 /* UITextField+MeeExtensionPlaceholderColor.m */,
-				9C5788E51C85667E002739EE /* NSObject+MeeIsThisDate.h */,
-				9C5788E61C85667E002739EE /* NSObject+MeeIsThisDate.m */,
+				9C5788E51C85667E002739EE /* NSDate+MeeIsThisDate.h */,
+				9C5788E61C85667E002739EE /* NSDate+MeeIsThisDate.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -927,7 +927,7 @@
 				9BF01C651BF729CE0004E78D /* MeeHTTPSessionManager.m in Sources */,
 				9C0BAEB11C40EF9100747C7B /* MeeWordViewController.m in Sources */,
 				9C0BAEA81C40EF4700747C7B /* MeeVideoViewController.m in Sources */,
-				9C5788E71C85667E002739EE /* NSObject+MeeIsThisDate.m in Sources */,
+				9C5788E71C85667E002739EE /* NSDate+MeeIsThisDate.m in Sources */,
 				9BB667401BFC28C50082B620 /* MeeLoginButton.m in Sources */,
 				9B47C3271BED835F0060F6CD /* MeePulishViewController.m in Sources */,
 				9C83847F1C1EC0860043641A /* MeeFooterView.m in Sources */,
