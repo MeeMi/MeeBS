@@ -28,6 +28,9 @@
  2.非今年 -> 2014-08-06 19:47:57
  */
 
+
+// 最原始的时间处理方式
+/*
 - (NSString *)created_at
 {
 //     _created_at = @"2014-08-06 19:47:57";
@@ -80,9 +83,18 @@
         return _created_at;
         
     }
-    
-    
     return nil;
-    
 }
+*/
+
+// 时间处理方式二：
+/** 写一个时间的分类，判断日期是今年、今天、明天、昨天*/
+- (NSString *)created_at
+{
+    return nil;
+}
+
+
+
+
 @end

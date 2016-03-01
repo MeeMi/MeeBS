@@ -10,6 +10,8 @@
 
 @interface MeeNavigationController () <UIGestureRecognizerDelegate>
 
+
+
 @end
 
 @implementation MeeNavigationController
