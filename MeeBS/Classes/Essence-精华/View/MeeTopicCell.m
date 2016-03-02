@@ -17,10 +17,14 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;  // 文本内容
 
-@property (weak, nonatomic) IBOutlet UILabel *hotCommetLabel;
 
+
+// 最热评论
+@property (weak, nonatomic) IBOutlet UILabel *hotCommetLabel; // 最热评论内容
+
+@property (weak, nonatomic) IBOutlet UIView *cmtToolView;
 
 
 @end
@@ -54,6 +58,27 @@
     
     // 设置文本内容
     self.contentLabel.text = self.topicModel.text;
+    
+    // 最热评论的内容 (用户名 + 评论内容组成)
+    // 方式一： 直接使用最热评论的 NSArray 数组（不使用数据模型）
+    if(topicModel.top_cmt.count){  // 不为0 ，说明有最热评论
+        // 在cell防止重用，if else 都要进行 hidden设置
+        
+        self.cmtToolView.hidden = NO;
+        // 获取最热评论的内容
+        NSDictionary *cmtDic = topicModel.top_cmt[0];
+        
+        // 获取用户名
+        NSString *userName = cmtDic[@"user"][@"username"];
+        
+        // 评论的内容
+        NSString *cmtText = cmtDic[@"content"];
+        
+        self.hotCommetLabel.text = [NSString stringWithFormat:@"%@ : %@",userName,cmtText];
+        
+    }else{
+        self.cmtToolView.hidden = YES;
+    }
      
 }
 

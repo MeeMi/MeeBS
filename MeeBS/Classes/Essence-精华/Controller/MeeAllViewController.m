@@ -70,6 +70,8 @@ static NSString * const cellID = @"topic";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MeeTopicCell class]) bundle:nil] forCellReuseIdentifier:cellID];
     // xib必须通过代码设置cell的高度。storyBoard创建的高度，可以直接在里面设置
      self.tableView.rowHeight = 200; //(通过代理方法设置每行Cell的高度) 这个方法将每个cell的高度固定死了
+
+    
 }
 
 - (void)setupRefreshAndMoreData
@@ -113,7 +115,7 @@ static NSString * const cellID = @"topic";
     __weak typeof(self) weakSelf = self;
     [self.manager GET:MeeBaseUrl parameters:parame success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         // NSLog(@"-----> %@",responseObject);
-        //[responseObject writeToFile:@"/Users/Lee/Desktop/data.plist" atomically:true];
+        //[responseObject writeToFile:@"/Users/Mee/Desktop/data.plist" atomically:true];
         // 进行字典数组转模型
         weakSelf.topics = [MeeTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
@@ -176,7 +178,7 @@ static NSString * const cellID = @"topic";
     // 通过xib创建的cell
     MeeTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     cell.topicModel = self.topics[indexPath.row];
-    
+    // cell.selectionStyle = UITableViewCellSelectionStyleNone;  // 可以直接在storyborad中设置
     return cell;
 }
 

@@ -135,9 +135,6 @@
         // 非今年
         return _created_at;
     }
-    
-    
-    return nil;
 }
 
 

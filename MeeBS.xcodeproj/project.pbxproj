@@ -45,6 +45,8 @@
 		9C5788E71C85667E002739EE /* NSDate+MeeIsThisDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5788E61C85667E002739EE /* NSDate+MeeIsThisDate.m */; };
 		9C579E551C251A5D0010420F /* MeeCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C579E541C251A5D0010420F /* MeeCategoryCell.m */; };
 		9C579E581C251A710010420F /* MeeUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C579E571C251A710010420F /* MeeUserCell.m */; };
+		9C5F077B1C86CC320078E135 /* MeeHotCmtModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F077A1C86CC320078E135 /* MeeHotCmtModel.m */; };
+		9C5F077E1C86CD600078E135 /* MeeHotUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F077D1C86CD600078E135 /* MeeHotUserModel.m */; };
 		9C69A5561C2104DF007EE398 /* MeeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A5551C2104DF007EE398 /* MeeButton.m */; };
 		9C69A55A1C2126EC007EE398 /* MeeWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A5581C2126EC007EE398 /* MeeWebController.m */; };
 		9C69A55B1C2126EC007EE398 /* MeeWebController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C69A5591C2126EC007EE398 /* MeeWebController.xib */; };
@@ -161,6 +163,10 @@
 		9C579E541C251A5D0010420F /* MeeCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeCategoryCell.m; sourceTree = "<group>"; };
 		9C579E561C251A710010420F /* MeeUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeUserCell.h; sourceTree = "<group>"; };
 		9C579E571C251A710010420F /* MeeUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeUserCell.m; sourceTree = "<group>"; };
+		9C5F07791C86CC320078E135 /* MeeHotCmtModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeHotCmtModel.h; sourceTree = "<group>"; };
+		9C5F077A1C86CC320078E135 /* MeeHotCmtModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeHotCmtModel.m; sourceTree = "<group>"; };
+		9C5F077C1C86CD600078E135 /* MeeHotUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeHotUserModel.h; sourceTree = "<group>"; };
+		9C5F077D1C86CD600078E135 /* MeeHotUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeHotUserModel.m; sourceTree = "<group>"; };
 		9C69A5541C2104DF007EE398 /* MeeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeButton.h; sourceTree = "<group>"; };
 		9C69A5551C2104DF007EE398 /* MeeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeButton.m; sourceTree = "<group>"; };
 		9C69A5571C2126EC007EE398 /* MeeWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeWebController.h; sourceTree = "<group>"; };
@@ -685,6 +691,10 @@
 			children = (
 				9CBF42731C7DB18E00CAD6E5 /* MeeTopicModel.h */,
 				9CBF42741C7DB18E00CAD6E5 /* MeeTopicModel.m */,
+				9C5F07791C86CC320078E135 /* MeeHotCmtModel.h */,
+				9C5F077A1C86CC320078E135 /* MeeHotCmtModel.m */,
+				9C5F077C1C86CD600078E135 /* MeeHotUserModel.h */,
+				9C5F077D1C86CD600078E135 /* MeeHotUserModel.m */,
 			);
 			name = Topic;
 			sourceTree = "<group>";
@@ -906,6 +916,7 @@
 			files = (
 				9C69A55E1C2142D5007EE398 /* MeeSettingViewController.m in Sources */,
 				9C00BA421C2303150058A850 /* MeeCategoryViewController.m in Sources */,
+				9C5F077B1C86CC320078E135 /* MeeHotCmtModel.m in Sources */,
 				9BB666FC1BFC0A460082B620 /* MeeLoginRegisterController.m in Sources */,
 				9C69A56C1C215AFE007EE398 /* MeeOtherCell.m in Sources */,
 				9BEBD10D1BF2C84E00FE8CFB /* MeeTabBar.m in Sources */,
@@ -950,6 +961,7 @@
 				9B47C3181BED810F0060F6CD /* MeeNavigationController.m in Sources */,
 				9C69A5631C215758007EE398 /* MeeClearCell.m in Sources */,
 				9BF01C681BF72CEC0004E78D /* MeeConst.m in Sources */,
+				9C5F077E1C86CD600078E135 /* MeeHotUserModel.m in Sources */,
 				9C90B8FE1C1DA23F0099F410 /* MeeMeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

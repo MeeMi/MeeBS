@@ -54,6 +54,10 @@ typedef enum{
 @property (nonatomic, assign) MeeTopicType type;
 
 
+// 最热评论
+/** 方式一 ： 直接用最原始的 NSArray */
+// 一个数组中装有 最热评论的数组，到时候要将 最热评论 转换成 数据模型
+ @property (nonatomic, strong) NSArray *top_cmt;
 
 
 
