@@ -9,6 +9,8 @@
 #import "MeeTopicCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
+#import "MeeHotUserModel.h"
+
 @interface MeeTopicCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *hreadImageView;
@@ -61,6 +63,7 @@
     
     // 最热评论的内容 (用户名 + 评论内容组成)
     // 方式一： 直接使用最热评论的 NSArray 数组（不使用数据模型）
+    /*
     if(topicModel.top_cmt.count){  // 不为0 ，说明有最热评论
         // 在cell防止重用，if else 都要进行 hidden设置
         
@@ -78,6 +81,21 @@
         
     }else{
         self.cmtToolView.hidden = YES;
+    }
+     */
+    
+    // 方式二： 使用模型中 转出模型对数据进行处理最热评论
+    if (topicModel.topCmt) { // 不为空，表示有最热评论
+        self.cmtToolView.hidden = NO;
+        // 获取用户名
+        
+        NSString *userName = topicModel.topCmt.userModel.username;
+        // 最热评论的内容
+        NSString *cmtText = topicModel.topCmt.content;
+        self.hotCommetLabel.text = [NSString stringWithFormat:@"%@ : %@",userName,cmtText];
+        
+    }else{
+        self.cmtToolView.hidden =YES;
     }
      
 }

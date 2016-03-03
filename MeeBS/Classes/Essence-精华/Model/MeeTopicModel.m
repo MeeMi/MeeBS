@@ -7,12 +7,13 @@
 //
 
 #import "MeeTopicModel.h"
+#import <MJExtension.h>
 
 @implementation MeeTopicModel
 
 // 对数据处理
 
-// 对发布时间处理
+#pragma mark - 对发布时间处理
 
 /*
  1.今年
@@ -138,6 +139,14 @@
 }
 
 
+#pragma mark - 对数据转模型进行设置
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    // 用自己定义的属性名，替换掉字典中的【key】
+    
+    // 将字典数组中 - 第一个字典数组 - 转换成MeeHotCmtModel模型
+    return @{@"topCmt":@"top_cmt[0]"};
+}
 
 
 @end
