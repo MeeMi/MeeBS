@@ -140,12 +140,19 @@
 
 
 #pragma mark - 对数据转模型进行设置
+// 用自己定义的属性名，替换掉字典中的【key】
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
-    // 用自己定义的属性名，替换掉字典中的【key】
-    
     // 将字典数组中 - 第一个字典数组 - 转换成MeeHotCmtModel模型
-    return @{@"topCmt":@"top_cmt[0]"};
+    return @{@"topCmt":@"top_cmt[0]",  // 方式二
+             @"hotTopCmtModels" : @"top_cmt" // 方式三
+             };
+}
+
+// 告诉框架 ， 数组中存放的是什么 模型
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{@"hotTopCmtModels" : @"MeeHotCmtModel"};
 }
 
 

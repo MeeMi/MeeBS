@@ -58,6 +58,7 @@ typedef enum{
 /** 方式一 ： 直接用最原始的 NSArray */
 // @property (nonatomic, strong) NSArray *top_cmt;
 
+/** 方式二 */
 /** 将数组中的内容最终转换成 数据模型（MeeHotCmtModel） */
 // 直接让数组中只有一个字典，之间取出数组中的第一元素为 MeeHotCommentModel
 // 声明 【模型属性名】，对应的[字典key] @"topCmt" : @"top_cmt[0]"
@@ -65,6 +66,12 @@ typedef enum{
 
 // 将字典数组中 - 第一个字典数组 - 转换成MeeHotCmtModel模型
 @property (nonatomic, strong)   MeeHotCmtModel *topCmt;
+
+/** 方式三 */
+// 告诉数组中装的 模型
+@property (nonatomic, strong)  NSArray  * hotTopCmtModels;
+
+
 
 
 @end

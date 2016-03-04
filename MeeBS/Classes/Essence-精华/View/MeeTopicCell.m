@@ -21,12 +21,16 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;  // 文本内容
 
-
-
 // 最热评论
 @property (weak, nonatomic) IBOutlet UILabel *hotCommetLabel; // 最热评论内容
 
 @property (weak, nonatomic) IBOutlet UIView *cmtToolView;
+
+// 按钮旁边 的数字处理
+@property (weak, nonatomic) IBOutlet UIButton *dingBtn;
+@property (weak, nonatomic) IBOutlet UIButton *caiBtn;
+@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
+@property (weak, nonatomic) IBOutlet UIButton *pinglunBtn;
 
 
 @end
@@ -97,8 +101,57 @@
     }else{
         self.cmtToolView.hidden =YES;
     }
-     
+    
+    
+    // 方式三：还是用数组的参数，但告诉数组中装的模型是 MeeHotCmtModel
+    /*
+    if (topicModel.hotTopCmtModels.count) {  // 不为 0 ，表示有最热评论
+        self.cmtToolView.hidden = NO;
+        
+        MeeHotCmtModel *hotCmtModel = topicModel.hotTopCmtModels[0];
+        // 用户名
+        NSString *userName = hotCmtModel.userModel.username;
+        // 评论内容
+        NSString *cmtText = hotCmtModel.content;
+        self.hotCommetLabel.text = [NSString stringWithFormat:@"%@ : %@",userName,cmtText];
+    }else{
+        self.cmtToolView.hidden = YES;
+    }
+     */
+    
+    
+    // 处理 工具条上 点赞 分享 上面的数组
+    /*
+    if(topicModel.cai >= 10000.0){
+        [self.caiBtn setTitle:[NSString stringWithFormat:@"%0.1f万",topicModel.cai / 10000.0] forState:UIControlStateNormal];
+    }else if(topicModel.cai == 0){
+        [self.caiBtn setTitle:@"踩" forState:UIControlStateNormal];
+    }else{
+        [self.caiBtn setTitle:[NSString stringWithFormat:@"%zd",topicModel.cai] forState:UIControlStateNormal];
+    }
+     */
+    [self setButtonTitle:self.dingBtn andTitle:@"顶" andCount:topicModel.ding];
+    [self setButtonTitle:self.caiBtn andTitle:@"踩" andCount:topicModel.cai];
+    [self setButtonTitle:self.shareBtn andTitle:@"分享" andCount:topicModel.repost];
+    [self setButtonTitle:self.pinglunBtn andTitle:@"评论" andCount:topicModel.comment];
 }
+
+
+// 对按钮上 的数字处理，单独抽方法进行封装
+- (void)setButtonTitle:(UIButton *)btn andTitle:(NSString *)title andCount:(NSInteger)count
+{
+    if(count >= 10000.0){
+        [btn setTitle:[NSString stringWithFormat:@"%0.1f万",count / 10000.0] forState:UIControlStateNormal];
+    }else if(count == 0){
+        [btn setTitle:title forState:UIControlStateNormal];
+    }else{
+        [btn setTitle:[NSString stringWithFormat:@"%zd",count] forState:UIControlStateNormal];
+    }
+}
+
+
+
+
 
 // 重写setFrame
 // 当封装一些控件时，不想外界改变控件的大小，可以在这个位置，直接设置固定尺寸。因为外界改变尺寸，最终会来到这个方法，被拦截了，进行重写设置

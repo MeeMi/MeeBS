@@ -194,11 +194,15 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="caiBtn" destination="meA-qi-ULp" id="zwp-WP-pI7"/>
                 <outlet property="cmtToolView" destination="16i-hE-HR2" id="7Nk-Ik-MgR"/>
                 <outlet property="contentLabel" destination="i2c-yI-nW2" id="Fsk-2X-qAy"/>
+                <outlet property="dingBtn" destination="jWO-8U-wE9" id="lzy-ic-6eN"/>
                 <outlet property="hotCommetLabel" destination="hiu-Td-eOI" id="CTk-6n-cIg"/>
                 <outlet property="hreadImageView" destination="bkx-Pe-tGe" id="1x6-J9-xho"/>
                 <outlet property="nameLabel" destination="9Dm-od-oln" id="dmT-Qm-eZj"/>
+                <outlet property="pinglunBtn" destination="pkS-bW-nku" id="qVp-VF-jWq"/>
+                <outlet property="shareBtn" destination="459-TU-P4a" id="Ihq-uy-TI2"/>
                 <outlet property="timeLabel" destination="AP6-j5-yAi" id="jhm-8l-Yhr"/>
             </connections>
             <point key="canvasLocation" x="350" y="384"/>
