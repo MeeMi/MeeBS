@@ -72,6 +72,25 @@ typedef enum{
 @property (nonatomic, strong)  NSArray  * hotTopCmtModels;
 
 
+/** 显示图片 */
+// 需要进行 声明 【模型属性名】对应[字典key]
+@property (nonatomic, copy) NSString *smallImage; /**< image0 */
+@property (nonatomic, copy) NSString *middleImage; /**< image2 */
+@property (nonatomic, copy) NSString *largeImage; /**< image1 */
+
+// 判断是不是gif图片
+@property (nonatomic, assign, getter=isGif) BOOL gif;
+
+
+/**< 辅助属性 */
+// 在计算图片frame时,如果图片高度超过一定的值,设置为大图
+@property (nonatomic, assign ,getter=isBigPicture) BOOL bigPicture; /**< 是否是大图 */
+@property (nonatomic, assign) CGRect centerViewFrame; /**<中间控件的尺寸*/
+@property (nonatomic, assign) CGFloat cellHight; /**< cell的高度 */
+
+@property (nonatomic, assign) CGFloat height; /**<高度 */
+@property (nonatomic, assign) CGFloat width; /**<宽度 */
+
 
 
 @end

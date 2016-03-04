@@ -145,7 +145,12 @@
 {
     // 将字典数组中 - 第一个字典数组 - 转换成MeeHotCmtModel模型
     return @{@"topCmt":@"top_cmt[0]",  // 方式二
-             @"hotTopCmtModels" : @"top_cmt" // 方式三
+             @"hotTopCmtModels" : @"top_cmt",// 方式三
+             
+             // 对图片属性 进行更名
+             @"smallImage" : @"image0",
+             @"middleImage" : @"image2",
+             @"largeImage" : @"image1"
              };
 }
 

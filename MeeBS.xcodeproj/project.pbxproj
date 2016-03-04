@@ -56,6 +56,8 @@
 		9C69A5681C215772007EE398 /* MeeSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C69A5661C215772007EE398 /* MeeSettingCell.xib */; };
 		9C69A56C1C215AFE007EE398 /* MeeOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A56A1C215AFE007EE398 /* MeeOtherCell.m */; };
 		9C69A56D1C215AFE007EE398 /* MeeOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C69A56B1C215AFE007EE398 /* MeeOtherCell.xib */; };
+		9C6C17821C89938500808D5F /* MeeTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6C17811C89938500808D5F /* MeeTopicPictureView.m */; };
+		9C6C17841C8993AD00808D5F /* MeeTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6C17831C8993AD00808D5F /* MeeTopicPictureView.xib */; };
 		9C83847F1C1EC0860043641A /* MeeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C83847E1C1EC0860043641A /* MeeFooterView.m */; };
 		9C8384821C1EC4D10043641A /* MeeSquareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8384811C1EC4D10043641A /* MeeSquareModel.m */; };
 		9C90B8F41C1D11200099F410 /* MeeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90B8F31C1D11200099F410 /* MeeTextField.m */; };
@@ -182,6 +184,9 @@
 		9C69A5691C215AFE007EE398 /* MeeOtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeOtherCell.h; sourceTree = "<group>"; };
 		9C69A56A1C215AFE007EE398 /* MeeOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeOtherCell.m; sourceTree = "<group>"; };
 		9C69A56B1C215AFE007EE398 /* MeeOtherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeeOtherCell.xib; sourceTree = "<group>"; };
+		9C6C17801C89938500808D5F /* MeeTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeTopicPictureView.h; sourceTree = "<group>"; };
+		9C6C17811C89938500808D5F /* MeeTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeTopicPictureView.m; sourceTree = "<group>"; };
+		9C6C17831C8993AD00808D5F /* MeeTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeeTopicPictureView.xib; sourceTree = "<group>"; };
 		9C83847D1C1EC0860043641A /* MeeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeFooterView.h; sourceTree = "<group>"; };
 		9C83847E1C1EC0860043641A /* MeeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeFooterView.m; sourceTree = "<group>"; };
 		9C8384801C1EC4D10043641A /* MeeSquareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeSquareModel.h; sourceTree = "<group>"; };
@@ -705,6 +710,9 @@
 				9CBF42781C7DB4BE00CAD6E5 /* MeeTopicCell.h */,
 				9CBF42791C7DB4BE00CAD6E5 /* MeeTopicCell.m */,
 				9CBF427A1C7DB4BE00CAD6E5 /* MeeTopicCell.xib */,
+				9C6C17801C89938500808D5F /* MeeTopicPictureView.h */,
+				9C6C17811C89938500808D5F /* MeeTopicPictureView.m */,
+				9C6C17831C8993AD00808D5F /* MeeTopicPictureView.xib */,
 			);
 			name = topic;
 			sourceTree = "<group>";
@@ -840,6 +848,7 @@
 				9C69A56D1C215AFE007EE398 /* MeeOtherCell.xib in Resources */,
 				9BF01C701BF737E60004E78D /* MeeTagTableViewCell.xib in Resources */,
 				9C69A55B1C2126EC007EE398 /* MeeWebController.xib in Resources */,
+				9C6C17841C8993AD00808D5F /* MeeTopicPictureView.xib in Resources */,
 				9CBF427C1C7DB4BE00CAD6E5 /* MeeTopicCell.xib in Resources */,
 				9BFA81CC1BEAF7E500AA71B5 /* Assets.xcassets in Resources */,
 			);
@@ -953,6 +962,7 @@
 				9B47C3111BED7F7B0060F6CD /* AppDelegate.m in Sources */,
 				9C0BAEAB1C40EF6700747C7B /* MeeVoiceViewController.m in Sources */,
 				9BF01C5D1BF6C0B50004E78D /* MeeTagTableViewController.m in Sources */,
+				9C6C17821C89938500808D5F /* MeeTopicPictureView.m in Sources */,
 				9BE8BDB51BF8241000B75E7B /* UIImageView+MeeHeaderImage.m in Sources */,
 				9B47C31E1BED83120060F6CD /* MeeFriendTrendsViewController.m in Sources */,
 				9C4A847F1C244CE70054D56B /* MeeCategoryModel.m in Sources */,
