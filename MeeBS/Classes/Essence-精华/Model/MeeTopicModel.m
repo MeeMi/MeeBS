@@ -139,7 +139,37 @@
 }
 
 
+#pragma mark - 计算中间(图片,声音,视频)的frame
+// 把计算中间view 的 frame留在 模型中计算，而不是在添加中间部分计算原因：
+// 计算中间部分 frame 。 其他属性（如帖子的内容）
+- (CGRect)centerViewFrame
+{
+    CGFloat centerViewX = MeeMargin;
+    
+    // 帖子的文字内容
+    CGFloat textY = 55;
+    // 文字内容的 宽度是固定的，通过 固定宽度 - 计算高度
+    CGFloat textW = MeeScreenW - 2 * centerViewX;
+    CGFloat textH = [self.text boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height;
+    CGFloat centerViewY = textY + textH + MeeMargin;
+    // 中间控件的高度(可以通过模型属性获取)
+    // 因为获取到的尺寸很大,所以进行等比缩放
+    CGFloat centerViewW = textW;
+    CGFloat centerViewH = centerViewW / self.width * self.height;
+    
+    // 如果处理后的高度，任然大于 屏幕高度。设置高度 为固定值。同时可以认定 图片为大图
+    if (centerViewH > MeeScreenH) {
+        self.bigPicture = YES;
+        centerViewH = 200;
+    }
+    
+    return  _centerViewFrame = CGRectMake(centerViewX, centerViewY, centerViewW, centerViewH);
+ }
+
+
 #pragma mark - 对数据转模型进行设置
+// 对MJ框架的配置可以单独抽取一个类进行配置
+
 // 用自己定义的属性名，替换掉字典中的【key】
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {

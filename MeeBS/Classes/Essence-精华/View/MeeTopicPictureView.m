@@ -17,6 +17,9 @@
 
 @implementation MeeTopicPictureView
 
-
++ (instancetype)pictureView
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([MeeTopicPictureView class]) owner:nil options:nil]lastObject];
+}
 
 @end

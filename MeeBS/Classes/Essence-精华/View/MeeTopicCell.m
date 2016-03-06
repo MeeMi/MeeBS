@@ -8,8 +8,9 @@
 
 #import "MeeTopicCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-
 #import "MeeHotUserModel.h"
+
+#import "MeeTopicPictureView.h"
 
 @interface MeeTopicCell()
 
@@ -31,6 +32,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiBtn;
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 @property (weak, nonatomic) IBOutlet UIButton *pinglunBtn;
+
+
+// cell类型 - 中间部分
+// 因为最终要添加到 cell中 有个数组对其进行强引用。
+@property (nonatomic, weak) MeeTopicPictureView *picView; /**< 图片的view */
+
 
 
 @end
@@ -134,6 +141,16 @@
     [self setButtonTitle:self.caiBtn andTitle:@"踩" andCount:topicModel.cai];
     [self setButtonTitle:self.shareBtn andTitle:@"分享" andCount:topicModel.repost];
     [self setButtonTitle:self.pinglunBtn andTitle:@"评论" andCount:topicModel.comment];
+    
+    
+    
+    // 帖子中间的 控制器处理
+    if (topicModel.type == MeeTopicTypePicture) {
+        // 图片帖子
+        // 设置中间 控件的 frame
+        self.picView.frame = topicModel.centerViewFrame;
+    }
+    
 }
 
 
@@ -148,6 +165,37 @@
         [btn setTitle:[NSString stringWithFormat:@"%zd",count] forState:UIControlStateNormal];
     }
 }
+
+
+
+// 当帖子的类型是 - 《图片》
+// 懒加载创建 图片的view ，添加到 MeeTopicCell中
+#pragma mark - 创建图片的view
+// 在cell中使用懒加载 - 减少重复创建和销毁，提供性能
+- (MeeTopicPictureView *)picView
+{
+    //   弱引用，会被销毁,这样懒加载不器作用 _pictureView 还是会为空的
+    //  _pictureView = [MeeTopicPictureView pictureView];
+    //   MeeTopicPictureView *pictureView 局部强引用指向创建的对象
+
+    if (_picView == nil) {
+        // 图片的 view 是通过 xib创建，所以要通过 沙盒 找到 xib 加载
+        MeeTopicPictureView *pictureView  = [MeeTopicPictureView pictureView];
+        _picView = pictureView;
+        // 添加
+        [self.contentView addSubview:_picView];
+    }
+    return _picView;
+}
+
+
+
+
+
+
+
+
+
 
 // 重写setFrame
 // 当封装一些控件时，不想外界改变控件的大小，可以在这个位置，直接设置固定尺寸。因为外界改变尺寸，最终会来到这个方法，被拦截了，进行重写设置

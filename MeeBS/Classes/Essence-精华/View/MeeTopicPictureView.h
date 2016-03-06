@@ -10,4 +10,6 @@
 
 @interface MeeTopicPictureView : UIView
 
++ (instancetype)pictureView;
+
 @end
