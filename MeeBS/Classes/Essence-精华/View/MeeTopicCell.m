@@ -148,7 +148,18 @@
     if (topicModel.type == MeeTopicTypePicture) {
         // 图片帖子
         // 设置中间 控件的 frame
+        self.picView.topic = topicModel;
         self.picView.frame = topicModel.centerViewFrame;
+        self.picView.hidden = NO;
+    }else if(topicModel.type == MeeTopicTypeVideo){
+        // 视频帖子
+        self.picView.hidden = YES;
+    }else if (topicModel.type == MeeTopicTypeVoice){
+        // 声音帖子
+        self.picView.hidden = YES;
+    }else{
+        // 文字帖子
+        self.picView.hidden = YES;
     }
     
 }

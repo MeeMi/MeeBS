@@ -22,4 +22,27 @@
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([MeeTopicPictureView class]) owner:nil options:nil]lastObject];
 }
 
+
+// 因为是重storyBoard ， xib 中加载的view所以，用awakeFromNib
+- (void)awakeFromNib
+{
+    self.backgroundColor = [UIColor redColor];
+      // 当设置 autoresizingMask ,当View 600 x 600 缩放到屏幕大小时,scrollView 的尺寸也跟随一起缩放到屏幕大小
+ 
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    // self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+}
+
+
+// 对图片进行设置
+- (void)setTopic:(MeeTopicModel *)topic
+{
+    
+}
+
+
 @end

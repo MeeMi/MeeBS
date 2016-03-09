@@ -162,7 +162,7 @@
         self.bigPicture = YES;
         centerViewH = 200;
     }
-    
+
     return  _centerViewFrame = CGRectMake(centerViewX, centerViewY, centerViewW, centerViewH);
  }
 
