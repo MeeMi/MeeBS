@@ -27,14 +27,9 @@
 - (void)awakeFromNib
 {
     self.backgroundColor = [UIColor redColor];
-      // 当设置 autoresizingMask ,当View 600 x 600 缩放到屏幕大小时,scrollView 的尺寸也跟随一起缩放到屏幕大小
- 
-}
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    // self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    // 通过了 frame 设置了从 xib加载的View，就要禁止掉 View的自动拉伸
+    self.autoresizingMask = UIViewAutoresizingNone;
 }
 
 
