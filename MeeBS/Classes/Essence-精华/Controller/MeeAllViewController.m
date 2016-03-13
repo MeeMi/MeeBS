@@ -182,6 +182,15 @@ static NSString * const cellID = @"topic";
     return cell;
 }
 
+// 先调用 heightForRowAtIndexPath 这个方法初始化cell的高度,在调用 cellForRowAtIndexPath 创建cell对象
+// heightForRowAtIndexPath 这个方法被频繁调用,当一个cell离开屏幕,再进入屏幕,会重复调用这个方法设置高度,所以会再次调用计算高度的方法.比较消耗性能,因此如果 那个cell的高度已经计算出来,就不要重复计算了, 必须在计算cell的高度进行已有值的判断
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 设置cell的高度
+    // 获取每行cell对应的模型，获取其中计算的高度
+    MeeTopicModel *model = self.topics[indexPath.row];
+    return model.cellHeight;
+}
 
 
 

@@ -8,6 +8,7 @@
 
 #import "MeeTopicModel.h"
 #import <MJExtension.h>
+#import "MeeHotUserModel.h"
 
 @implementation MeeTopicModel
 
@@ -144,6 +145,8 @@
 // 计算中间部分 frame 。 其他属性（如帖子的内容）
 - (CGRect)centerViewFrame
 {
+    if(_centerViewFrame.size.width) return _centerViewFrame;
+    
     CGFloat centerViewX = MeeMargin;
     
     // 帖子的文字内容
@@ -165,6 +168,43 @@
 
     return  _centerViewFrame = CGRectMake(centerViewX, centerViewY, centerViewW, centerViewH);
  }
+
+#pragma mark - 计算cell的高度
+- (CGFloat)cellHeight
+{
+    if (_cellHeight) return _cellHeight;
+    // 文字
+    CGFloat textY = 55;
+    CGFloat textW = MeeScreenW - 2 * MeeMargin;
+    CGFloat textH = [self.text boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height;
+    
+    // 没有中间控件时
+    _cellHeight = textY + textH + MeeMargin;
+    
+    // 有中间控件的时候，计算中间控件的高度
+    if(self.type != MeeTopicTypeWord){
+        _cellHeight = CGRectGetMaxY(self.centerViewFrame) + MeeMargin;
+    }
+    
+    // 有最热评论
+    if(self.topCmt){
+        // 标题高度
+        CGFloat titleHeight = 20;
+        // 计算内容的高度
+        NSString *contentStr = [NSString stringWithFormat: @"%@ : %@",self.topCmt.userModel.username,self.topCmt.content];
+        CGFloat contentHeight = [contentStr boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height;
+        _cellHeight += titleHeight + contentHeight + MeeMargin;
+    }
+    
+    // 底部工具条的高度
+    CGFloat bottomToolViewHeight = 35;
+    _cellHeight += bottomToolViewHeight + MeeMargin;
+    
+    return _cellHeight;
+}
+
+
+
 
 
 #pragma mark - 对数据转模型进行设置
