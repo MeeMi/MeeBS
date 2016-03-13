@@ -11,7 +11,7 @@
 
 @interface MeeTopicPictureView : UIView
 
-@property (nonatomic, strong) MeeTopicModel *topic; /**< 数据模型 */
+@property (nonatomic, strong) MeeTopicModel *topicModel; /**< 数据模型 */
 
 
 + (instancetype)pictureView;

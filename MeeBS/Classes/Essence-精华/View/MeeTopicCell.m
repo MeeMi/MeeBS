@@ -149,7 +149,7 @@
         // 图片帖子
         // 设置中间 控件的 frame
         self.picView.hidden = NO;
-        self.picView.topic = topicModel;
+        self.picView.topicModel = topicModel;
         self.picView.frame = topicModel.centerViewFrame;
         
     }else if(topicModel.type == MeeTopicTypeVideo){

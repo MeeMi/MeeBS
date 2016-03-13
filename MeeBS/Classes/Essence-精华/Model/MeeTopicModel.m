@@ -220,7 +220,9 @@
              // 对图片属性 进行更名
              @"smallImage" : @"image0",
              @"middleImage" : @"image2",
-             @"largeImage" : @"image1"
+             @"largeImage" : @"image1",
+             
+             @"gif" : @"is_gif"
              };
 }
 
