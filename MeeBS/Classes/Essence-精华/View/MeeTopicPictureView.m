@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
 
 
+
 @end
 
 @implementation MeeTopicPictureView
@@ -42,35 +43,28 @@
 - (void)setTopicModel:(MeeTopicModel *)topicModel
 {
     _topicModel = topicModel;
-    
+    __weak typeof(self) weakSelf = self;
+    // 设置进度条的熟悉设置
+    self.progressView.roundedCorners = 5;
+    self.progressView.progressLabel.textColor = [UIColor blueColor];
+    self.progressView.progressTintColor = [UIColor grayColor];
+    self.progressView.trackTintColor = [UIColor lightGrayColor];
     // 对进度条设置
-
-//    self.progressView.progressTintColor = [UIColor blueColor];
-//    self.progressView.trackTintColor = [UIColor redColor];
-
-    __weak typeof(self) weakSef = self;
-    // 设置图片
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:topicModel.largeImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        NSLog(@"========%ld",(long)expectedSize);
-        //if(receivedSize < 0 || expectedSize < 0) return ;
-        // 设置图片下载进度
-        weakSef.progressView.hidden = NO;
-
-//
-//        // 只要图片下载一点就会调用(频繁)(对进度条的属性设置，就方法外面)
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topicModel.largeImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        // 会对图片进行下载，条用比较平凡
+        // 设置进度条
+        if(receivedSize < 0 || expectedSize < 0 ) return ;
+        weakSelf.progressView.hidden = NO;
+        
         CGFloat progressValue = 1.0 * receivedSize / expectedSize;
-        weakSef.progressView.progress = progressValue;
-        weakSef.progressView.progressLabel.text = [NSString stringWithFormat:@"%0.f%%",progressValue * 100];
+        weakSelf.progressView.progress = progressValue;
+        weakSelf.progressView.progressLabel.text = [NSString stringWithFormat:@"%0.1f%%",progressValue * 100];
         
-        self.progressView.roundedCorners = 5;
-        self.progressView.progressLabel.textColor = [UIColor redColor];
-        
-        
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        // 图片下载完成操作
-        // weakSef.progressView.hidden = YES;
+     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        weakSelf.progressView.hidden = YES;
     }];
-    self.progressView.hidden = YES;
+
+
     
     // 对图片进行判断
     // 1.判断是不是 GIF 图片
@@ -104,8 +98,13 @@
     // 2.判断是不是 大图
     if(topicModel.bigPicture){
         self.seeBigPicButton.hidden = NO;
+        // 设置图片的显示模式
+        self.imageView.contentMode = UIViewContentModeTop;
+        self.imageView.clipsToBounds = YES;
     }else{
         self.seeBigPicButton.hidden = YES;
+        self.imageView.contentMode = UIViewContentModeScaleToFill;
+        self.imageView.clipsToBounds = NO;
     }
 }
 
