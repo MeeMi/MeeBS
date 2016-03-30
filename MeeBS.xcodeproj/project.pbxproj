@@ -68,6 +68,8 @@
 		9CBF427C1C7DB4BE00CAD6E5 /* MeeTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBF427A1C7DB4BE00CAD6E5 /* MeeTopicCell.xib */; };
 		9CE0A3971C25746300011309 /* MeeRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0A3961C25746300011309 /* MeeRefreshHeader.m */; };
 		9CE0A39A1C2594D300011309 /* MeeRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE0A3991C2594D300011309 /* MeeRefreshFooter.m */; };
+		9CF553741CABCC2800F91F56 /* MeeSeeBigPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF553721CABCC2800F91F56 /* MeeSeeBigPicViewController.m */; };
+		9CF553751CABCC2800F91F56 /* MeeSeeBigPicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF553731CABCC2800F91F56 /* MeeSeeBigPicViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,6 +208,9 @@
 		9CE0A3961C25746300011309 /* MeeRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeRefreshHeader.m; sourceTree = "<group>"; };
 		9CE0A3981C2594D300011309 /* MeeRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeRefreshFooter.h; sourceTree = "<group>"; };
 		9CE0A3991C2594D300011309 /* MeeRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeRefreshFooter.m; sourceTree = "<group>"; };
+		9CF553711CABCC2800F91F56 /* MeeSeeBigPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeeSeeBigPicViewController.h; sourceTree = "<group>"; };
+		9CF553721CABCC2800F91F56 /* MeeSeeBigPicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeeSeeBigPicViewController.m; sourceTree = "<group>"; };
+		9CF553731CABCC2800F91F56 /* MeeSeeBigPicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeeSeeBigPicViewController.xib; sourceTree = "<group>"; };
 		D38C993FA7D182A9E412698B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -713,6 +718,9 @@
 				9C6C17801C89938500808D5F /* MeeTopicPictureView.h */,
 				9C6C17811C89938500808D5F /* MeeTopicPictureView.m */,
 				9C6C17831C8993AD00808D5F /* MeeTopicPictureView.xib */,
+				9CF553711CABCC2800F91F56 /* MeeSeeBigPicViewController.h */,
+				9CF553721CABCC2800F91F56 /* MeeSeeBigPicViewController.m */,
+				9CF553731CABCC2800F91F56 /* MeeSeeBigPicViewController.xib */,
 			);
 			name = topic;
 			sourceTree = "<group>";
@@ -846,6 +854,7 @@
 			files = (
 				9BB6673D1BFC1D2F0082B620 /* MeeFriendTrendsViewController.storyboard in Resources */,
 				9C69A5681C215772007EE398 /* MeeSettingCell.xib in Resources */,
+				9CF553751CABCC2800F91F56 /* MeeSeeBigPicViewController.xib in Resources */,
 				9C69A56D1C215AFE007EE398 /* MeeOtherCell.xib in Resources */,
 				9BF01C701BF737E60004E78D /* MeeTagTableViewCell.xib in Resources */,
 				9C69A55B1C2126EC007EE398 /* MeeWebController.xib in Resources */,
@@ -933,6 +942,7 @@
 				9C579E551C251A5D0010420F /* MeeCategoryCell.m in Sources */,
 				9C4A84821C2460880054D56B /* MeeUserModel.m in Sources */,
 				9CBF427B1C7DB4BE00CAD6E5 /* MeeTopicCell.m in Sources */,
+				9CF553741CABCC2800F91F56 /* MeeSeeBigPicViewController.m in Sources */,
 				9C69A55A1C2126EC007EE398 /* MeeWebController.m in Sources */,
 				9C0BAEA51C40EF2500747C7B /* MeeAllViewController.m in Sources */,
 				9C69A5671C215772007EE398 /* MeeSettingCell.m in Sources */,

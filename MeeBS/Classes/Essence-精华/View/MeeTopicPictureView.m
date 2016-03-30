@@ -10,6 +10,8 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <DALabeledCircularProgressView.h>
 
+#import "MeeSeeBigPicViewController.h"
+
 @interface MeeTopicPictureView() 
 @property (weak, nonatomic) IBOutlet UIImageView *gifPic;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -93,8 +95,6 @@
     }
     
     
-    
-    
     // 2.判断是不是 大图
     if(topicModel.bigPicture){
         self.seeBigPicButton.hidden = NO;
@@ -107,6 +107,15 @@
         self.imageView.clipsToBounds = NO;
     }
 }
+
+// 点击查看大图
+- (IBAction)seeBigPicBtn:(UIButton *)sender {
+    if (self.imageView.image == nil) return;  // 当图片没有下载完，禁止点击按钮跳转
+    MeeSeeBigPicViewController *seeVc = [[MeeSeeBigPicViewController alloc]init];
+    seeVc.topicModel = self.topicModel;
+    [self.window.rootViewController presentViewController:seeVc animated:YES completion:nil];
+}
+
 
 
 @end
