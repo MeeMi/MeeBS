@@ -27,13 +27,13 @@
         // 以XML形式解析服务器返回的数据
         // manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
         // 设置请求超时的时间
-        // manager.requestSerializer setTimeoutInterval:<#(NSTimeInterval)#>
+        // manager.requestSerializer setTimeoutInterval:(NSTimeInterval)
     });
     
     return instance_;
 }
 
-
+// 创建单例
 //+ (instancetype)manager
 //{
 //    MeeHTTPSessionManager *manager = [super manager];

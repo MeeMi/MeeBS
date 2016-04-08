@@ -30,7 +30,7 @@
 - (MeeHTTPSessionManager *)manager
 {
     if (_manager == nil) {
-        _manager = [MeeHTTPSessionManager manager];
+        _manager = [MeeHTTPSessionManager shareManger];
     }
     return _manager;
 }
